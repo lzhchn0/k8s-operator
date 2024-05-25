@@ -11,9 +11,9 @@
         "text": "step1/text.md"
       },
     ],
-  }
+  },
   
   "backend": {
     "imageid": "ubuntu"
-  }
+  },
 }
