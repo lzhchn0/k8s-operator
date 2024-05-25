@@ -171,3 +171,7 @@ curl -L -o kubebuilder "https://go.kubebuilder.io/dl/latest/$(go env GOOS)/$(go 
 chmod +x kubebuilder && mv kubebuilder /usr/local/bin/
 ```{{exec}}
 
+
+```shell
+export PATH=/usr/local/go/bin:$PATH
+```{{exec}}
