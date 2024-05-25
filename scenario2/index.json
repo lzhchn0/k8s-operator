@@ -6,5 +6,8 @@
       "text": "intro.md"
     }
 
+  },
+  "backend": {
+    "imageid": "ubuntu"
   }
 }
