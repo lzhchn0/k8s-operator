@@ -5,15 +5,6 @@
     "intro": {
       "text": "intro.md"
     },
-    "steps": [
-      {
-        "title": "build environment - 1 / 10",
-        "text": "step1/text.md"
-      },
-      {
-        "title": "build redis-cluster - 2 / 10",
-        "text": "step2/text.md"
-      },
-    ]
+
   },
 }
