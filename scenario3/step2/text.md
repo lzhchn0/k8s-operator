@@ -54,6 +54,7 @@ EOF
 3. Create a Redis worker Deployment
 
 ```
+kubectl apply -f - << EOF
 apiVersion: apps/v1
 kind: Deployment
 metadata:
