@@ -2,7 +2,7 @@
 
 This will create a Redis cluster with one master and three workers. 
 
-. Create a Redis master Deployment
+- Create a Redis master Deployment
 
 ```
 kubectl apply -f - << EOF
@@ -35,7 +35,7 @@ EOF
 ```{{exec}}
 
 
-. Create a Redis master Service
+- Create a Redis master Service
 
 ```
 kubectl apply -f - << EOF
@@ -53,7 +53,7 @@ spec:
 EOF
 ```{{exec}}
 
-. Create a Redis worker Deployment
+- Create a Redis worker Deployment
 
 ```
 kubectl apply -f - << EOF
@@ -89,7 +89,7 @@ EOF
 ```{{exec}}
 
 
-. Create a Redis worker Service.
+- Create a Redis worker Service.
 ```
 kubectl apply -f - << EOF
 apiVersion: v1
