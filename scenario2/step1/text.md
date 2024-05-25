@@ -1,4 +1,4 @@
-Environment building is the most important step across all projects, choose them wisely. 
+Setup a appropriate environment is the most important step across all projects, choose it wisely. 
 
 Go version 1.22.3
 ```shell
