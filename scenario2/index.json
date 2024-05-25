@@ -4,8 +4,8 @@
   "details": {
     "intro": {
       "text": "intro.md"
-    }
-  },
+    },
+  
 
     "steps": [
       {
@@ -16,11 +16,11 @@
         "title": "build redis-cluster - 2 / 10",
         "text": "step2/text.md"
       }
-    ],
+    ]
 
-
+  },
   
   "backend": {
-    "imageid": "ubuntu"
+    "imageid": "kubernetes-kubeadm-1node-4GB"
   }
 }
