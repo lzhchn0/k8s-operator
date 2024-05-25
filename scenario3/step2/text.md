@@ -10,6 +10,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: redis-master
+  namespace: default
 spec:
   selector:
     matchLabels:
@@ -42,6 +43,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: redis-master
+  namespace: default  
 spec:
   ports:
   - port: 6379
@@ -59,6 +61,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: redis-worker
+  namespace: default    
 spec:
   selector:
     matchLabels:
@@ -93,6 +96,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: redis-worker
+  namespace: default    
 spec:
   ports:
   - port: 6379
