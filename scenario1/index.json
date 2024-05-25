@@ -1,6 +1,6 @@
 {
   "title": "Scenario ONE",
-  "description": "This is the description of scenario TWO",
+  "description": "This is the description of scenario ONE",
 
   "backend": {
     "imageid": "ubuntu"
