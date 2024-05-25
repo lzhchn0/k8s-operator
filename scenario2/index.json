@@ -1,6 +1,18 @@
 {
   "title": "Scenario TWO",
   "description": "This is the description of scenario TWO",
+  "details": {
+    "intro": {
+      "text": "intro.md"
+    },
+    "steps": [
+      {
+        "title": "build environment - 1 / 10",
+        "text": "step1/text.md"
+      },
+    ],
+  }
+  
   "backend": {
     "imageid": "ubuntu"
   }
