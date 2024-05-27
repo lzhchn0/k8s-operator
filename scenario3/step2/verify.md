@@ -5,4 +5,5 @@
 
  k exec redis-worker-5c8b468cf7-5sk9r  -it -- redis-cli info server
 
-  k exec redis-worker-5c8b468cf7-5sk9r  -it -- redis-cli info keyspace
+ k exec redis-worker-5c8b468cf7-5sk9r  -it -- redis-cli info keyspace
+
