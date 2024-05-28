@@ -15,7 +15,15 @@
       {
         "title": "build redis-cluster - 2 / 10",
         "text": "step2/text.md"
-      }
+      },
+      {
+        "title": "build inline feature - 3 / 10",
+        "text": "step3/text.md"
+      },
+      {
+        "title": "build framework of operator - 4 / 10",
+        "text": "step4/text.md"
+      }      
     ]
 
   },
