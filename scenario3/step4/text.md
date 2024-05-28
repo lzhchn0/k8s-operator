@@ -8,6 +8,11 @@ mkdir operator; cd operator
 ```{{exec}}
 
 ```
+k apply -f config/samples/rediscluster_v1_monitoring.yaml
+```{{exec}}
+
+
+```
 kubebuilder init   --plugins=go/v4   --repo blabla.com
 ```{{exec}}
 
