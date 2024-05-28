@@ -28,7 +28,15 @@ make install
 ```{{exec}}
 
 
-
 ```
 make run
+```{{exec}}
+
+
+
+```
+go get k8s.io/client-go/tools/remotecommand@v0.30.0
+go get k8s.io/apimachinery/pkg/util/httpstream/spdy@v0.30.0
+go get k8s.io/apimachinery/pkg/util/proxy@v0.30.0
+go mod tidy
 ```{{exec}}
