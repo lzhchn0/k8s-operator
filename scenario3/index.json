@@ -23,7 +23,16 @@
       {
         "title": "build framework of operator - 4 / 10",
         "text": "step4/text.md"
-      }      
+      },
+      {
+        "title": "change main.go - 5 / 10",
+        "text": "step5/text.md"
+      }  
+      {
+        "title": "change controller.go - 6 / 10",
+        "text": "step6/text.md"
+      }  
+      
     ]
 
   },
