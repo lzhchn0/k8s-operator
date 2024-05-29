@@ -1,5 +1,5 @@
 # Change monitoring_controller.go
-
+- define MonitoringReconciler
 ```
 type MonitoringReconciler struct {
 	client.Client
@@ -8,7 +8,7 @@ type MonitoringReconciler struct {
 	Config    *rest.Config
 }
 ```
-
+- import packages
 ```
 import (
 	"context"
@@ -33,7 +33,7 @@ import (
 )
 ```
 
-
+- define Reconcile 
 ```
 func (r *MonitoringReconciler) Reconcile(ctx context.Context, req ctrl.Request) (ctrl.Result, error) {
 	logf := log.FromContext(ctx)
@@ -73,7 +73,7 @@ func (r *MonitoringReconciler) Reconcile(ctx context.Context, req ctrl.Request) 
 				"POST", req2.URL())
 			if err != nil {
 				// handle error
-				logf.Error(err, "==**==2 Failed to exec reids command")
+				logf.Error(err, "Failed in NewSPDYExecutor")
 			}
 
 			err = exec.Stream(remotecommand.StreamOptions{
@@ -85,7 +85,7 @@ func (r *MonitoringReconciler) Reconcile(ctx context.Context, req ctrl.Request) 
 
 			if err != nil {
 				// handle error
-				logf.Error(err, "==**==3 Failed to exec reids command")
+				logf.Error(err, "Failed to stream command")
 			}
 
 
