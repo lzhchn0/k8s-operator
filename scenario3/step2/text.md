@@ -107,3 +107,14 @@ EOF
 ```{{exec}}
 
 
+
+- To create the first event
+```
+k apply  -f config/samples/rediscluster_v1_monitoring.yaml
+```{{exec}}
+
+
+- To create a new event
+```
+k replace --grace-period=0  --force  -f config/samples/rediscluster_v1_monitoring.yaml
+```{{exec}}
