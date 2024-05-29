@@ -27,9 +27,9 @@
       {
         "title": "change main.go - 5 / 10",
         "text": "step5/text.md"
-      }  
+      },
       {
-        "title": "change controller.go - 6 / 10",
+        "title": "change monitoring_controller.go - 6 / 10",
         "text": "step6/text.md"
       }  
       
