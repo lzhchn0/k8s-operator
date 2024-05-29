@@ -69,9 +69,7 @@ func (r *MonitoringReconciler) Reconcile(ctx context.Context, req ctrl.Request) 
 					TTY:       true,
 				}, scheme.ParameterCodec)
 
-			exec, err := remotecommand.NewSPDYExecutor( // ctrl.Manager.GetConfig(),
-				//r.Clientset.RESTConfig(),
-				r.Config,
+			exec, err := remotecommand.NewSPDYExecutor( r.Config,
 				"POST", req2.URL())
 			if err != nil {
 				// handle error
