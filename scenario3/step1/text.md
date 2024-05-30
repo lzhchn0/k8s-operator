@@ -80,6 +80,8 @@ curl -OL  https://go.dev/dl/go1.10.4.linux-amd64.tar.gz \
 &&  rm -rf /usr/local/go && tar -C /usr/local -xzf go1.10.4.linux-amd64.tar.gz
 ```{{exec}}
 
+> Go1.1.1 (2018-08-24 released)
+
 Setup Go path
 ```shell
 export GOPATH=/root/go
