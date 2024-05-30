@@ -2,7 +2,7 @@
 
 ```
 apt install graphviz
-```
+```{{exec}}
 
 > Now access  go-callvis
 
