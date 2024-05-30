@@ -83,6 +83,7 @@ curl -OL  https://go.dev/dl/go1.10.4.linux-amd64.tar.gz \
 Setup Go path
 ```shell
 export GOPATH=/root/go
+export GOROOT=/usr/local/go
 export PATH=/usr/local/go/bin:$GOPATH/bin:$PATH
 alias h=history
 ```{{exec}}
