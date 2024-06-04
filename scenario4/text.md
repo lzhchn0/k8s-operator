@@ -1,3 +1,5 @@
+Setup Bazel Environment
+
 ```shell
 export WATCH_NAMESPACE=default
 ```{{exec}}
