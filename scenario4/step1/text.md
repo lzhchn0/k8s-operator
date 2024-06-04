@@ -29,7 +29,7 @@ curl https://bazel.build/bazel-release.pub.gpg | sudo apt-key add -
 sudo apt update
 ```{{exec}}
 
-> Install Bazel:
+> Install Bazel ver 7.1.2:
 ```shell
 sudo apt install bazel
 ```{{exec}}
