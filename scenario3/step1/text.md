@@ -88,6 +88,7 @@ export GOPATH=/root/go
 export GOROOT=/usr/local/go
 export PATH=/usr/local/go/bin:$GOPATH/bin:$PATH
 alias h=history
+alias kb=kubebuilder
 ```{{exec}}
 
 Download/install kubebuilder v2.0.1
