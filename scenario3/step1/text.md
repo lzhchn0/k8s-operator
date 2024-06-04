@@ -93,7 +93,10 @@ alias h=history
 Download/install kubebuilder v2.0.1
 ```shell
 curl -L -o kubebuilder.tar.gz https://github.com/kubernetes-sigs/kubebuilder/releases/download/v2.0.1/kubebuilder_2.0.1_linux_amd64.tar.gz
-tar -xvzf ./kubebuilder.tar.gz  -C kubebuilder201
+## tar -xvzf ./kubebuilder.tar.gz  -C kubebuilder201
+tar -xvzf ./kubebuilder.tar.gz  
+chmod +x kubebuilder_2.0.1_linux_amd64/bin/*
+mv kubebuilder_2.0.1_linux_amd64/bin/kubebuilder  /usr/local/bin
 ```{{exec}}
 
 
