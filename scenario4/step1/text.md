@@ -39,9 +39,9 @@ sudo apt install bazel
 bazel version
 ```{{exec}}
 
-
+> There are BUILD.bazel and WORKSPACE 
 ```shell
-
+bazel build //:gazelle
 ```{{exec}}
 
 
