@@ -1,0 +1,24 @@
+{
+  "title": "Scenario FOUR",
+  "description": "This is an environment of Bazel",
+  "details": {
+    "intro": {
+      "text": "intro.md"
+    },
+  
+
+    "steps": [
+      {
+        "title": "build environment - 1 / 10",
+        "text": "step1/text.md"
+      }
+        
+      
+    ]
+
+  },
+  
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1node-4GB"
+  }
+}
