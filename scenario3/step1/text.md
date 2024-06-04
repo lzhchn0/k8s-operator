@@ -90,9 +90,14 @@ export PATH=/usr/local/go/bin:$GOPATH/bin:$PATH
 alias h=history
 ```{{exec}}
 
+Download/install kubebuilder v2.0.1
+```shell
+curl -L -o kubebuilder.tar.gz https://github.com/kubernetes-sigs/kubebuilder/releases/download/v2.0.1/kubebuilder_2.0.1_linux_amd64.tar.gz
+tar -xvzf ./kubebuilder.tar.gz  -C kubebuilder201
+```{{exec}}
 
 
-Download/install kubebuilder
+Download/install kubebuilder for latest 
 ```shell
 curl -L -o kubebuilder "https://go.kubebuilder.io/dl/latest/$(go env GOOS)/$(go env GOARCH)"
 chmod +x kubebuilder && mv kubebuilder /usr/local/bin/
