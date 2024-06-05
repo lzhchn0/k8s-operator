@@ -23,6 +23,12 @@ k apply -f config/samples/rediscluster_v1_monitoring.yaml
 kubebuilder init   --plugins=go/v4   --repo blabla.com
 ```{{exec}}
 
+> kubebuilder 2.0.1, go 1.14
+```shell
+kubebuilder init      --repo blabla.com
+```{{exec}}
+
+
 ```shell
 kubebuilder create api \
   --kind Monitoring\
