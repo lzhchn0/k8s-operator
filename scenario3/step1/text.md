@@ -1,5 +1,10 @@
 Setup a appropriate environment is the most important step across all projects, choose it wisely. 
 
+blabla:
+  go 1.22.0
+  toolchain go1.22.3
+
+
 Go version 1.22.3
 ```shell
 curl -OL  https://go.dev/dl/go1.22.3.linux-amd64.tar.gz \
