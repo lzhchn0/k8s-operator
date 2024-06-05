@@ -1,5 +1,20 @@
 # Change main.go
-When create controller, 
+When create controller in main.go,
+
+```
+import ( "k8s.io/client-go/kubernetes" )
+```
+
+```
+124:
+	if err != nil {
+		setupLog.Error(err, "unable to start manager")
+		os.Exit(1)
+	}
+
+	config := mgr.GetConfig()
+	clientset, err := kubernetes.NewForConfig(config)
+```
 
 ```
 	if err = (&controller.MonitoringReconciler{
