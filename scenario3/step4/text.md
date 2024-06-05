@@ -20,7 +20,7 @@ k apply -f config/samples/rediscluster_v1_monitoring.yaml
 
 
 ```shell
-kubebuilder init   --plugins=go/v4   --repo blabla.com
+kubebuilder init  --domain opencanon.io  --plugins=go/v4   --repo blabla.com
 ```{{exec}}
 
 > kubebuilder 2.0.1, go 1.14
