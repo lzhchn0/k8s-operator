@@ -3,10 +3,10 @@ When create controller in main.go,
 
 ```
 import ( "k8s.io/client-go/kubernetes" )
-```
+```{{copy}}
 
-```
 124:
+```
 	if err != nil {
 		setupLog.Error(err, "unable to start manager")
 		os.Exit(1)
@@ -14,7 +14,7 @@ import ( "k8s.io/client-go/kubernetes" )
 
 	config := mgr.GetConfig()
 	clientset, err := kubernetes.NewForConfig(config)
-```
+```{{copy}}
 
 ```
 	if err = (&controller.MonitoringReconciler{
@@ -26,4 +26,4 @@ import ( "k8s.io/client-go/kubernetes" )
 		setupLog.Error(err, "unable to create controller", "controller", "Monitoring")
 		os.Exit(1)
 	}
-```
+```{{copy}}
