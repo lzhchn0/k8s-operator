@@ -25,7 +25,7 @@ kubebuilder init  --domain opencanon.io  --plugins=go/v4   --repo blabla.com
 
 > kubebuilder 2.0.1, go 1.14
 ```shell
-kubebuilder init      --repo blabla.com
+kubebuilder init   --domain opencanon.io   --repo blabla.com
 ```{{exec}}
 
 
