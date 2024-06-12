@@ -96,6 +96,15 @@ alias h=history
 alias kb=kubebuilder
 ```{{exec}}
 
+
+Setup vim
+```shell
+chmod +w ~/.vimrc
+echo "\n"  >> ~/.vimrc
+echo "set number"  >> ~/.vimrc
+```{{exec}}
+
+
 Download/install kubebuilder v2.0.1
 ```shell
 curl -L -o kubebuilder.tar.gz https://github.com/kubernetes-sigs/kubebuilder/releases/download/v2.0.1/kubebuilder_2.0.1_linux_amd64.tar.gz
