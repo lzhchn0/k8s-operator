@@ -100,7 +100,7 @@ alias kb=kubebuilder
 Setup vim
 ```shell
 chmod +w ~/.vimrc
-echo "\n"  >> ~/.vimrc
+echo ""  >> ~/.vimrc
 echo "set number"  >> ~/.vimrc
 ```{{exec}}
 
