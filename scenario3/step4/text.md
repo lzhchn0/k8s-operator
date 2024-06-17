@@ -54,6 +54,11 @@ make install
 make run
 ```{{exec}}
 
+
+```shell
+make manifests; make install; make run
+```{{exec}}
+
 ```shell
 cp leaderelection  ../go/pkg/mod/github.com/spotahome/kooper/v2@v2.2.0/controller/leaderelection/leaderelection.go
 ```{{exec}}
