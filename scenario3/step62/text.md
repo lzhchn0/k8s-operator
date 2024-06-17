@@ -9,6 +9,7 @@ git clone https://github.com/spotahome/redis-operator.git
 
 
 ```
+cd /root/spota/redis-operator/example/redisfailover
 k apply -f basic.yaml
 k apply -f bootstrapping-with-port.yaml
 k apply -f bootstrapping-with-sentinels.yaml
