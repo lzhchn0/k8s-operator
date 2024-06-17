@@ -14,7 +14,7 @@ kubectl replace -f https://raw.githubusercontent.com/spotahome/redis-operator/${
 ```{{exec}}
 
 ```
-
+k apply -f ./redis-operator/example/redisfailover
 ```{{exec}}
 
 
