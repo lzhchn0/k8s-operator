@@ -2,6 +2,12 @@ spotahome setup
 
 
 ```
+git init
+git clone https://github.com/spotahome/redis-operator.git
+```{{exec}}
+
+
+```
 helm repo add redis-operator https://spotahome.github.io/redis-operator
 helm repo update
 helm install redis-operator redis-operator/redis-operator
@@ -17,10 +23,6 @@ kubectl replace -f https://raw.githubusercontent.com/spotahome/redis-operator/${
 k apply -f ./redis-operator/example/redisfailover
 ```{{exec}}
 
-
-```
-
-```{{exec}}
 
 
 
