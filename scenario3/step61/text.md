@@ -27,8 +27,13 @@ curl -LO https://github.com/kubernetes-sigs/kustomize/releases/download/kustomiz
 go install github.com/ofabry/go-callvis@latest
 ```{{exec}}
 
-> Now access  go-callvis
+> Now access Web Selector
+{{TRAFFIC_SELECTOR}}
 
+> Now access  go-callvis:4444
+{{TRAFFIC_HOST1_4444}}
+
+> Now access  go-callvis:7878
 [ACCESS go-callvis]({{TRAFFIC_HOST1_7878}})
 
 > Now access  port:80
