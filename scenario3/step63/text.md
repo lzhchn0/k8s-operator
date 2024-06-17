@@ -1,1 +1,13 @@
-setup Prometheus
+setup Prometheus Operator
+
+
+
+```
+
+```{{exec}}
+
+
+
+```
+
+```{{exec}}
