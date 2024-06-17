@@ -58,7 +58,7 @@ k apply -f ./redis-operator/example/redisfailover
 
 
 
-
+==Good
 ```
 cd /root/spota/redis-operator
 k create -f manifests/databases.spotahome.com_redisfailovers.yaml
