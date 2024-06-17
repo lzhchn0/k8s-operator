@@ -27,6 +27,10 @@ curl -LO https://github.com/kubernetes-sigs/kustomize/releases/download/kustomiz
 go install github.com/ofabry/go-callvis@latest
 ```{{exec}}
 
+```
+kubectl port-forward --address 0.0.0.0  svc/prometheus-operator-grafana 8080:80
+```{{exec}}
+
 > Now access Web Selector
 {{TRAFFIC_SELECTOR}}
 
