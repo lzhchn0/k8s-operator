@@ -54,7 +54,9 @@ make install
 make run
 ```{{exec}}
 
-
+```shell
+cp leaderelection  ../go/pkg/mod/github.com/spotahome/kooper/v2@v2.2.0/controller/leaderelection/leaderelection.go
+```{{exec}}
 
 ```shell
 go get k8s.io/client-go/tools/remotecommand@v0.30.0
