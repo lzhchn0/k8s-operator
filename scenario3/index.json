@@ -39,7 +39,12 @@
       {
         "title": "spota home config - 62 / 10",
         "text": "step62/text.md"
-      }        
+      },
+      {
+        "title": "Prometheus Operator setup - 63 / 10",
+        "text": "step63/text.md"
+      }  
+      
     ]
 
   },
