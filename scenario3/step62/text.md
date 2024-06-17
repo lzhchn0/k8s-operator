@@ -59,7 +59,8 @@ k apply -f ./redis-operator/example/redisfailover
 
 
 ```
-
+k create -f manifests/databases.spotahome.com_redisfailovers.yaml
+k apply -f example/operator/all-redis-operator-resources.yaml
 ```{{exec}}
 
 
