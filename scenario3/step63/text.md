@@ -15,7 +15,7 @@ k get pods
 ```{{exec}}
 
 
-
+> reset grafana credential --
 ```
-
+/usr/share/grafana/bin/grafana-cli admin reset-admin-password
 ```{{exec}}
