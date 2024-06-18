@@ -17,6 +17,10 @@ kn monitoring
 k get pods
 ```{{exec}}
 
+> forward port of grafana to browser
+```
+ kubectl port-forward svc/prometheus-operator-grafana --address=0.0.0.0  8080:80
+```{{exec}}
 
 > reset grafana credential --
 ```
