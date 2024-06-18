@@ -1,5 +1,11 @@
 > To install the Redis Operator using Helm
 
+0. **Namespace setup**:
+
+```bash
+kubectl create ns spota
+kn spota
+```
 1. **Clone the repository**:
 
 ```bash
