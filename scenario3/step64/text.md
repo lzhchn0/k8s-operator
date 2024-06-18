@@ -2,27 +2,27 @@
 
 0. **Namespace setup**:
 
-```bash
+```
 kubectl create ns spota
 kn spota
-```
+```{{exec}}
 1. **Clone the repository**:
 
-```bash
-git clone https://github.com/spotahome/redis-operator.git
 ```
+git clone https://github.com/spotahome/redis-operator.git
+```{{exec}}
 
 2. **Checkout the specific version**:
 
-```bash
+```
 cd redis-operator
 git checkout v1.2.4
-```
+```{{exec}}
 
 3. **Install the Helm chart**:
 
-```bash
-helm install my-redis-op ./charts/redisoperator
 ```
+helm install my-redis-op ./charts/redisoperator
+```{{exec}}
 
 In this example, `my-redis-op` is the name of the Helm release. You can replace it with any name you prefer.
