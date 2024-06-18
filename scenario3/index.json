@@ -43,7 +43,12 @@
       {
         "title": "Prometheus Operator setup - 63 / 10",
         "text": "step63/text.md"
+      }, 
+      {
+        "title": "Redis Operator setup - 64 / 10",
+        "text": "step64/text.md"
       }  
+     
       
     ]
 
