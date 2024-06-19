@@ -107,6 +107,11 @@ EOF
 ```{{exec}}
 
 
+- To import data using redis-cli 
+```
+kubectl exec reids-2 -- redis-cli -h your-redis-host -p your-redis-port  set foo 10
+```{{exec}}
+
 
 - To create the first event
 ```
