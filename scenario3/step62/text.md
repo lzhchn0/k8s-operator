@@ -1,4 +1,4 @@
-spotahome setup 
+depricated -- spotahome setup 
 
 
 ```
