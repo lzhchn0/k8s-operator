@@ -25,4 +25,10 @@ git checkout v1.2.4
 helm install my-redis-op ./charts/redisoperator
 ```{{exec}}
 
+4. **scale replicaset to 3**:
+
+```
+k scale replicaset.apps/my-redis-op-redis-operator-86c6c75d45  --replicas=3
+```{{exec}}
+
 In this example, `my-redis-op` is the name of the Helm release. You can replace it with any name you prefer.
