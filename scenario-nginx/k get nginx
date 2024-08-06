@@ -1,3 +1,9 @@
 controlplane $ k get nginx
 NAME                  CURRENT   DESIRED   AGE   INGRESS IPS   SERVICE IPS
 my-autoscaled-nginx             5         24m  
+
+
+
+controlplane $ k get horizontalpodautoscalers.autoscaling  my-autoscaled-nginx  -oyaml 
+
+  currentReplicas: 5
