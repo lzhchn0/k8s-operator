@@ -1,1 +1,4 @@
 testing nginx operator
+
+
+k describe  nginx my-autoscaled-nginx
