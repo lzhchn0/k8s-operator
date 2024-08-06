@@ -1,0 +1,8 @@
+Conditions:
+  Type         Status  Reason          Message
+  ----         ------  ------          -------
+  AbleToScale  False   FailedGetScale  the HPA controller was unable to get the target's current scale: Internal error occurred: the spec replicas field ".spec.replicas" does not exist
+Events:
+  Type     Reason          Age                From                       Message
+  ----     ------          ----               ----                       -------
+  Warning  FailedGetScale  12s (x2 over 27s)  horizontal-pod-autoscaler  Internal error occurred: the spec replicas field ".spec.replicas" does not exist
