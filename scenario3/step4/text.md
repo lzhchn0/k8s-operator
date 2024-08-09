@@ -22,6 +22,28 @@ mv  api/v1/monitoring_types*.go   api/v1/monitoring_types.go
 
 ```{{exec}}
 
+
+To apply first crd
+```shell
+k apply -f config/crd/bases/rediscluster.opencanon.io_monitorings.yaml 
+```{{exec}}
+
+
+```shell
+
+```{{exec}}
+
+
+```shell
+
+```{{exec}}
+
+
+```shell
+
+```{{exec}}
+
+
 ```shell
 go clean -cache
 go clean -modcache 
