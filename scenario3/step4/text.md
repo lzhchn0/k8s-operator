@@ -15,7 +15,7 @@ rm  api/v1/monitoring_types.go
 ```{{exec}}
 
 
-- to clear old files
+- to rename files after upload files
 ```shell
 mv  "internal/controller/monitoring_controller*.go"    "internal/controller/monitoring_controller.go"
 mv  api/v1/monitoring_types*.go   api/v1/monitoring_types.go
