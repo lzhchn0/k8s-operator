@@ -25,7 +25,8 @@ mv  api/v1/monitoring_types*.go   api/v1/monitoring_types.go
 
 To apply first crd
 ```shell
-k apply -f config/crd/bases/rediscluster.opencanon.io_monitorings.yaml 
+k apply -f config/crd/bases/rediscluster.opencanon.io_monitorings.yaml
+k apply -f config/samples/rediscluster_v1_monitoring.yaml
 ```{{exec}}
 
 
