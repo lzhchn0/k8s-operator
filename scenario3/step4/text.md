@@ -10,9 +10,8 @@ mkdir operator; cd operator
 
 - to clear old files
 ```shell
- 
 rm  internal/controller/monitoring_controller.go
-rm api/v1/
+rm  api/v1/monitoring_types.go
 
 ```{{exec}}
 
