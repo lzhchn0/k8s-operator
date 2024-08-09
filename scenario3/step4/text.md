@@ -7,11 +7,18 @@
 mkdir operator; cd operator
 ```{{exec}}
 
-
 - to clear old files
 ```shell
 rm  internal/controller/monitoring_controller.go
 rm  api/v1/monitoring_types.go
+
+```{{exec}}
+
+
+- to clear old files
+```shell
+mv  "internal/controller/monitoring_controller*.go"    "internal/controller/monitoring_controller.go"
+mv  api/v1/monitoring_types*.go   api/v1/monitoring_types.go
 
 ```{{exec}}
 
