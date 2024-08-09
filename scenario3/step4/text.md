@@ -7,6 +7,15 @@
 mkdir operator; cd operator
 ```{{exec}}
 
+
+- to clear old files
+```shell
+ 
+rm  internal/controller/monitoring_controller.go
+rm api/v1/
+
+```{{exec}}
+
 ```shell
 go clean -cache
 go clean -modcache 
