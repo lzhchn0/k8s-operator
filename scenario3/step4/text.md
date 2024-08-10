@@ -33,6 +33,7 @@ k apply -f config/samples/rediscluster_v1_monitoring.yaml
 ```shell
 k get svc,deploy
 k get pods -o wide
+k get events | grep my-service
 ```{{exec}}
 
 
