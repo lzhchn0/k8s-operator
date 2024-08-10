@@ -38,7 +38,7 @@ k get events | grep my-service
 
 
 ```shell
-
+k get ing -o yaml
 ```{{exec}}
 
 
