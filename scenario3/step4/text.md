@@ -31,7 +31,7 @@ k apply -f config/samples/rediscluster_v1_monitoring.yaml
 
 
 ```shell
-
+k get svc,deploy
 ```{{exec}}
 
 
