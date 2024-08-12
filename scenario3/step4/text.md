@@ -94,9 +94,17 @@ make install
 make run
 ```{{exec}}
 
-
 ```shell
 make manifests; make install; make run
+```{{exec}}
+
+```shell
+make manifests; make install; make run  2>&1  | tee tt1
+```{{exec}}
+
+
+```shell
+make manifests; make install; make run  2>&1  tt1
 ```{{exec}}
 
 ```shell
