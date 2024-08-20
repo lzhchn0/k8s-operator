@@ -1,0 +1,33 @@
+apiVersion: mynginx.opencanon.io/v1
+kind: Monitoring
+metadata:
+  creationTimestamp: "2024-08-16T20:30:01Z"
+  generation: 1
+  labels:
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: operator
+  name: monitoring-sample
+  namespace: default
+  resourceVersion: "647585"
+  uid: 81f19efb-6837-4f4f-8f02-768303d6867e
+spec:
+  image: nginx:alpine
+  ingress:
+    annotations:
+      key1: value1
+      key2: value2
+    ingressClassName: nginx-class
+    labels:
+      app: nginx
+      tier: frontend
+  replicas: 3
+  service:
+    annotations:
+      description: This is a monitoring service
+    externalTrafficPolicy: Local
+    labels:
+      app: nginx
+      tier: frontend
+    loadBalancerIP: 192.168.1.1
+    type: LoadBalancer
+    usePodSelector: true
