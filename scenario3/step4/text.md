@@ -25,8 +25,8 @@ mv  api/v1/monitoring_types*.go   api/v1/monitoring_types.go
 
 To apply first CRD and first 'Monitoring'
 ```shell
-k apply -f config/crd/bases/rediscluster.opencanon.io_monitorings.yaml
-k apply -f config/samples/rediscluster_v1_monitoring.yaml
+k apply -f config/crd/bases/mynginx.opencanon.io_monitorings.yaml
+k apply -f config/samples/mynginx_v1_monitoring.yaml
 ```{{exec}}
 
 
@@ -55,7 +55,7 @@ go build
 ```{{exec}}
 
 ```shell
-k apply -f config/samples/rediscluster_v1_monitoring.yaml
+k apply -f config/samples/mynginx_v1_monitoring.yaml
 ```{{exec}}
 
 > kubebuilder 4.1.1, go 1.21.4
@@ -72,7 +72,7 @@ kubebuilder init   --domain opencanon.io   --repo blabla.com
 ```shell
 kubebuilder create api \
   --kind Monitoring\
-  --group rediscluster \
+  --group mynginx \
   --version v1 \
   --resource true \
   --controller true
