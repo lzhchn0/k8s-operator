@@ -25,6 +25,8 @@ import (
 	// to ensure that exec-entrypoint and run can make use of them.
 	_ "k8s.io/client-go/plugin/pkg/client/auth"
 
+	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+
 	"k8s.io/apimachinery/pkg/runtime"
 	utilruntime "k8s.io/apimachinery/pkg/util/runtime"
 	clientgoscheme "k8s.io/client-go/kubernetes/scheme"
@@ -43,6 +45,10 @@ import (
 var (
 	scheme   = runtime.NewScheme()
 	setupLog = ctrl.Log.WithName("setup")
+
+	metricsPort       = flag.String("metrics-port", "8080", "Prometheus metrics port.")
+	healthPort        = flag.String("health-port", "8081", "health port.")
+	pannotationFilter = flag.String("annotation-filter", "", "Filter Nginx resources, like default")
 )
 
 func init() {
@@ -150,12 +156,15 @@ func main() {
 	} else {
 		setupLog.Error(err, "GRT--nable to start manager")
 	}
+	ls, err := metav1.ParseToLabelSelector(*pannotationFilter)
+	annotationSelector, err := metav1.LabelSelectorAsSelector(ls)
 
 	if err = (&controller.MonitoringReconciler{
-		Client: mgr.GetClient(),
-		Event1: mgr.GetEventRecorderFor("monitoring"),
-		//Event1: mgr.GetEventRecorderFor("operator"),
-		Scheme: mgr.GetScheme(),
+		Client:           mgr.GetClient(),
+		Event1:           mgr.GetEventRecorderFor("monitoring"),
+		Log:              ctrl.Log.WithName("controllers").WithName("MyNginx"),
+		AnnotationFilter: annotationSelector,
+		Scheme:           mgr.GetScheme(),
 	}).SetupWithManager(mgr); err != nil {
 		setupLog.Error(err, "unable to create controller", "controller", "Monitoring")
 		os.Exit(1)
