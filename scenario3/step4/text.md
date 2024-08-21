@@ -11,6 +11,7 @@ mkdir operator; cd operator
 ```shell
 rm  internal/controller/monitoring_controller.go
 rm  api/v1/monitoring_types.go
+rm  cmd/main.go
 
 ```{{exec}}
 
