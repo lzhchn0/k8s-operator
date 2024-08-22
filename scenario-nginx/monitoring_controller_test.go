@@ -18,7 +18,12 @@ package controller
 
 import (
 	"context"
+	"os"
 	"testing"
+
+	ctrl "sigs.k8s.io/controller-runtime"
+
+	"k8s.io/client-go/kubernetes/scheme"
 
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
@@ -27,7 +32,7 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/reconcile"
 
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
-	
+
 	"sigs.k8s.io/controller-runtime/pkg/client"
 
 	mynginxv1 "blabla.com/api/v1"
@@ -44,8 +49,25 @@ var _ = Describe("Monitoring Controller", func() {
 			Namespace: "default", // TODO(user):Modify as needed
 		}
 		monitoring := &mynginxv1.Monitoring{}
-		
-		var k8sClient client.Client
+
+		// == to tear up CP
+		kubeconfig := os.Getenv("KUBECONFIG")
+
+		if kubeconfig == "" {
+			panic("KUBECONFIG environment variable must be set")
+		}
+
+		cfg, err := ctrl.GetConfig()
+
+		if err != nil {
+			panic(" ---- get config of KUBECONFIG is nil ")
+		}
+
+		k8sClient, err := client.New(cfg, client.Options{Scheme: scheme.Scheme})
+
+		if err != nil {
+			panic("==9900==Cleanup the specific resource instance Monitoring")
+		}
 
 		BeforeEach(func() {
 			By("creating the custom resource for the Kind Monitoring")
@@ -71,6 +93,7 @@ var _ = Describe("Monitoring Controller", func() {
 			By("Cleanup the specific resource instance Monitoring")
 			Expect(k8sClient.Delete(ctx, resource)).To(Succeed())
 		})
+
 		It("should successfully reconcile the resource", func() {
 			By("Reconciling the created resource")
 			controllerReconciler := &MonitoringReconciler{
@@ -88,14 +111,10 @@ var _ = Describe("Monitoring Controller", func() {
 	})
 })
 
-
-
-
 func TestListIngress(t *testing.T) {
 
-
-// v1alpha1  -->  mynginxv1 
+	// v1alpha1  -->  mynginxv1
 	nginx := &mynginxv1.Monitoring{ObjectMeta: metav1.ObjectMeta{Name: "my-nginx", Namespace: "default"}}
 	_ = nginx
-	
-	}
+
+}
