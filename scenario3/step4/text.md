@@ -10,6 +10,10 @@ mkdir operator; cd operator
 - to clear old files
 ```shell
 rm  internal/controller/monitoring_controller.go
+rm  internal/controller/nginx_controller_test.go
+rm  internal/controller/suite_test.go
+
+
 rm  api/v1/monitoring_types.go
 rm  cmd/main.go
 
