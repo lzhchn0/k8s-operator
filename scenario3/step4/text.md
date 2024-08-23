@@ -48,7 +48,7 @@ k get ing -o yaml
 
 
 ```shell
-
+go mod edit -go 1.22
 ```{{exec}}
 
 
