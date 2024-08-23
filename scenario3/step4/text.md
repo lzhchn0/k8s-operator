@@ -30,6 +30,7 @@ mv  api/v1/monitoring_types*.go   api/v1/monitoring_types.go
 
 To apply first CRD and first 'Monitoring'
 ```shell
+export KUBECONFIG=/etc/kubernetes/admin.conf
 k apply -f config/crd/bases/mynginx.opencanon.io_monitorings.yaml
 k apply -f config/samples/mynginx_v1_monitoring.yaml
 ```{{exec}}
