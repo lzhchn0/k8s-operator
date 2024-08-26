@@ -121,8 +121,8 @@ func TestListService(t *testing.T) {
 	fmt.Println("==099-0 ListService  ")
 
 	// v1alpha1  -->  mynginxv1
-	nginx := &mynginxv1.Monitoring{ObjectMeta: metav1.ObjectMeta{Name: "monitoring-sample", Namespace: "default"}}
-	// _ = nginx
+	monitoring := &mynginxv1.Monitoring{ObjectMeta: metav1.ObjectMeta{Name: "monitoring-sample", Namespace: "default"}}
+	// _ = monitoring
 
 	s1, err := getService("default", "my-service-01", 9091)
 	fmt.Println("==099-1 dump Service  ")
@@ -148,7 +148,7 @@ func TestListService(t *testing.T) {
 		Scheme: fakeClient.Scheme(),
 	}
 
-	svcs, err := r.listServices(context.Background(), fakeClient, nginx)
+	svcs, err := r.listServices(context.Background(), fakeClient, monitoring)
  
 	assert.NoError(t, err)
 
