@@ -1,27 +1,8 @@
-{
-  "title": "Scenario Code Generator",
-  "description": "This is an environment of code generator",
-  "details": {
-    "intro": {
-      "text": "intro.md"
-    },
-  
+# Kubernetes Operator Workshop
 
-    "steps": [
-      {
-        "title": "build environment - 1 / 10",
-        "text": "step1/text.md"
-      }
-      {
-        "title": "build environment - 2 / 10",
-        "text": "step2/text.md"
-      }  
-      
-    ]
+Welcome to this Kubernetes Operator Code Generator
 
-  },
-  
-  "backend": {
-    "imageid": "kubernetes-kubeadm-1node-4GB"
-  }
-}
+In this workshop we will
+
+-  
+- 
