@@ -40,9 +40,10 @@ step 4
 GOMODCACHE='/root/go/pkg/mod'
 ```{{exec}}
 
-
+./update-codegen.sh: line 14: ../vendor/k8s.io/code-generator/generate-groups.sh: No such file or directory
 step 5
 ```shell
+cd /root/go/pkg/mod/k8s.io
 cp /root/f/pkg/apis/foo/v1/*.go  /root/foo-controller/pkg/apis/foo/v1/
 ```{{exec}}
 
