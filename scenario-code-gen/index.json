@@ -1,0 +1,28 @@
+{
+  "title": "Scenario THREE",
+  "description": "This is the description of scenario THREE",
+  "details": {
+    "intro": {
+      "text": "intro.md"
+    },
+  
+
+    "steps": [
+      {
+        "title": "build environment - 1 / 10",
+        "text": "step1/text.md"
+      },
+      {
+        "title": "build redis-cluster - 2 / 10",
+        "text": "step2/text.md"
+      }
+     
+      
+    ]
+
+  },
+  
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1node-4GB"
+  }
+}
