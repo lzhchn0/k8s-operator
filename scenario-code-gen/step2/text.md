@@ -57,9 +57,9 @@ go get k8s.io/code-generator@v0.31.0
 ```{{exec}}
 
 
-step 61
+step 61: copy genertor
 ```shell
-
+ cp -r $(go env GOMODCACHE)/k8s.io/code-generator@v0.31.0   ~/foo-controller/vendor/k8s.io/code-generator
 ```{{exec}}
 
 
