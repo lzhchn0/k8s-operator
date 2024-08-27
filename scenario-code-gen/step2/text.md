@@ -37,7 +37,7 @@ cd hack
 
 step 4
 ```shell
-
+GOMODCACHE='/root/go/pkg/mod'
 ```{{exec}}
 
 
