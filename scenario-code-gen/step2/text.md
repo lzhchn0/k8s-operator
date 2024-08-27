@@ -83,6 +83,8 @@ step 64
 
 step 65
 ```shell
+mkdir boo && cd boo
+git init
 git clone https://github.com/sportshead/codegen-demo.git
 cd codegen-demo
 kubectl apply -f crd.yaml
