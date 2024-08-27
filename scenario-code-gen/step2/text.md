@@ -82,7 +82,11 @@ step 64
 
 step 65
 ```shell
-
+git clone https://github.com/sportshead/codegen-demo.git
+cd codegen-demo
+kubectl apply -f crd.yaml
+kubectl apply -f example/songs.yaml
+go run example/main.go
 ```{{exec}}
 
 
