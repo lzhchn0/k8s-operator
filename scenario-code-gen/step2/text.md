@@ -7,6 +7,7 @@ step 1: foo-controller
 mkdir foo-controller && cd foo-controller
 go mod init foo-controller
 go get k8s.io/apimachinery@v0.24.16
+go get k8s.io/code-generator@v0.24.16
 ```{{exec}}
 
 step 2
@@ -51,7 +52,8 @@ cp /root/f/pkg/apis/foo/v1/*.go  /root/foo-controller/pkg/apis/foo/v1/
 
 step 6
 ```shell
-
+go get k8s.io/apimachinery@v0.31.0
+go get k8s.io/code-generator@v0.31.0
 ```{{exec}}
 
 
