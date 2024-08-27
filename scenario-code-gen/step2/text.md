@@ -63,13 +63,14 @@ step 61: copy genertor
 ```{{exec}}
 
 
-step 62
+step 62 -- BAD
 ```shell
 go get k8s.io/code-generator@v0.28.1
 ```{{exec}}
 
-step 63: verify the installation
+step 63: install and verify the installation -- GOOD
 ```shell
+go mod tidy
 go list -m k8s.io/code-generator
 ```{{exec}}
 
