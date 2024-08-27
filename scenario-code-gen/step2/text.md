@@ -65,11 +65,12 @@ step 61
 
 step 62
 ```shell
-
+go get k8s.io/code-generator@v0.28.1
 ```{{exec}}
-step 63
-```shell
 
+step 63: verify the installation
+```shell
+go list -m k8s.io/code-generator
 ```{{exec}}
 
 
