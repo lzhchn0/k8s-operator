@@ -43,7 +43,7 @@ GOMODCACHE='/root/go/pkg/mod'
 
 step 5
 ```shell
-
+cp /root/f/pkg/apis/foo/v1/*.go  /root/foo-controller/pkg/apis/foo/v1/
 ```{{exec}}
 
 
