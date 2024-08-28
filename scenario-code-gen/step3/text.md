@@ -1,7 +1,34 @@
 Setup a appropriate environment.
 
-Go version 1.22.3
+install protoc-gen-gogo
+
 ```shell
-curl -OL  https://go.dev/dl/go1.22.3.linux-amd64.tar.gz \
-&&  rm -rf /usr/local/go && tar -C /usr/local -xzf go1.22.3.linux-amd64.tar.gz
+go get -u github.com/gogo/protobuf/protoc-gen-gogo
+```{{exec}}
+
+
+```shell
+
+```{{exec}}
+
+
+
+```shell
+
+```{{exec}}
+
+
+```shell
+
+```{{exec}}
+
+
+```shell
+
+```{{exec}}
+
+
+
+```shell
+
 ```{{exec}}
