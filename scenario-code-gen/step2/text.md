@@ -96,6 +96,7 @@ go run example/main.go
 
 step 66
 ```shell
+mkdir -p pkg/apis/foo.example.com/v1
 
 ```{{exec}}
 
