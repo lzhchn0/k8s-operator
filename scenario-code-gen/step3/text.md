@@ -8,13 +8,13 @@ go get -u github.com/gogo/protobuf/protoc-gen-gogo
 
 
 ```shell
-
+sudo apt install -y protobuf-compiler
 ```{{exec}}
 
 
 
 ```shell
-
+go install github.com/gogo/protobuf/protoc-gen-gogo@latest
 ```{{exec}}
 
 
