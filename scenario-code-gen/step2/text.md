@@ -12,7 +12,7 @@ go get k8s.io/code-generator@v0.24.16
 
 step 2
 ```shell
-mkdir -p pkg/apis/foo/v1 && cd pkg/apis/foo/v1
+mkdir -p pkg/apis/foo.example.com/v1 && cd pkg/apis/foo/v1
 touch doc.go
 touch types.go
 touch register.go
