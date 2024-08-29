@@ -6,8 +6,8 @@ step 1: foo-controller
 
 mkdir foo-controller && cd foo-controller
 go mod init foo-controller
-go get k8s.io/apimachinery@v0.24.16
-go get k8s.io/code-generator@v0.24.16
+go get k8s.io/apimachinery@v0.29.0
+go get k8s.io/code-generator@v0.29.0
 ```{{exec}}
 
 step 2
@@ -63,15 +63,14 @@ step 61: copy genertor
 ```{{exec}}
 
 
-step 62 -- BAD
+step 62 
 ```shell
-go get k8s.io/code-generator@v0.28.1
+go get k8s.io/code-generator@v0.29.0
 ```{{exec}}
 
-step 63: install and verify the installation -- GOOD
+step 63: 
 ```shell
-go mod tidy
-go list -m k8s.io/code-generator
+
 ```{{exec}}
 
 
@@ -81,7 +80,7 @@ step 64
 ```{{exec}}
 
 
-step 65
+step 65: install and verify the installation -- GOOD
 ```shell
 mkdir boo && cd boo
 git init
@@ -102,9 +101,10 @@ mkdir -p pkg/apis/foo.example.com/v1
 
 
 
-
+step 661:
 ```shell
-
+go mod tidy
+go list -m k8s.io/code-generator
 ```{{exec}}
 
 
