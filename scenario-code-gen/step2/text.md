@@ -109,9 +109,14 @@ go list -m k8s.io/code-generator
 
 
 
-
+step 662
 ```shell
-
+   39  git init
+   40  git clone https://github.com/kubernetes/code-generator.git
+   41  cd code-generator/
+   42  go build ./cmd/client-gen
+   43  go build ./cmd/lister-gen
+   44  go build ./cmd/informer-gen
 ```{{exec}}
 
 
