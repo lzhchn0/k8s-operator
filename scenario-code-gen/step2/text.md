@@ -123,7 +123,12 @@ step 662
 
 
 ```shell
-
+# Generate informers
+./informer-gen
+--input-dirs="github.com/codegen-demo/pkg/apis/foo.example.com/v1"
+--versioned-clientset-package="github.com/codegen-demo/pkg/generated/clientset/versioned"
+--listers-package="github.com/codegen-demo/pkg/generated/listers"
+--output-package="github.com/codegen-demo/pkg/generated/informers"
 ```{{exec}}
 
 ```shell
