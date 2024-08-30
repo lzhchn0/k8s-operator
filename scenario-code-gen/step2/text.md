@@ -12,6 +12,7 @@ go get k8s.io/code-generator@v0.29.0
 
 step 2
 ```shell
+mkdir -p pkg/client/clientset
 mkdir -p pkg/apis/foo.example.com/v1 && cd pkg/apis/foo.example.com/v1
 touch doc.go
 touch types.go
@@ -96,6 +97,7 @@ go run example/main.go
 step 66
 ```shell
 mkdir -p pkg/apis/foo.example.com/v1
+mkdir -p pkg/client/clientset
 
 ```{{exec}}
 
