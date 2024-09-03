@@ -7,7 +7,8 @@ git clone https://github.com/gardener/gardener.git
 
 
 ```shell
- 
+cd gardener
+make generate 
 ```{{exec}}
 
 
