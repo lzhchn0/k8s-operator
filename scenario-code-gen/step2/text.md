@@ -96,6 +96,7 @@ go run example/main.go
 
 step 66
 ```shell
+cd boo/codegen-demo
 mkdir -p pkg/apis/foo.example.com/v1
 mkdir -p pkg/client/clientset
 
