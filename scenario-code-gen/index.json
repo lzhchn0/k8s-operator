@@ -19,8 +19,11 @@
       {
         "title": "build redis-cluster - 3 / 10",
         "text": "step3/text.md"
-      }     
-      
+      },     
+      {
+        "title": "build gardener - 4 / 10",
+        "text": "step4/text.md"
+      }         
     ]
 
   },
