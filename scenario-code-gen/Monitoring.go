@@ -1,3 +1,6 @@
+// +k8s:deepcopy-gen=package
+// +groupName=music.sportshead.dev
+
 package v1
 
 import (
@@ -5,6 +8,12 @@ import (
 )
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
+// +genclient
+// +genclient:noStatus
+// +genclient:nonNamespaced
+// +genclient:onlyVerbs=create,get,list,watch,update,patch,delete
+
+
 type Monitoring struct {
     metav1.TypeMeta   `json:",inline"`
     metav1.ObjectMeta `json:"metadata,omitempty"`
