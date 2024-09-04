@@ -114,7 +114,8 @@ go list -m k8s.io/code-generator
 
 step 662
 ```shell
-
+chmod -R 777 hack
+hack/update-codegen.sh
 
 ```{{exec}}
 
