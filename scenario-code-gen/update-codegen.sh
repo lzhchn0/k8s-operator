@@ -45,4 +45,4 @@ kube::codegen::gen_client \
 
 # clean up temporary libraries added in go.mod by code-generator
 "${GO_CMD}" mod tidy
-"${GO_CMD}" run ../example/main.go
+"${GO_CMD}" run ./example/main.go
