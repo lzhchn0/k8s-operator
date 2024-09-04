@@ -1,14 +1,13 @@
-clone Gardener 
+Build Monitoring Operator  
 
 ```shell
-git clone https://github.com/gardener/gardener.git
-
+cd boo/codegen-demo/pkg/apis/foo.example.com/v1
+curl -O https://raw.githubusercontent.com/lzhchn0/k8s-operator/main/scenario-code-gen/Monitoring.go
 ```{{exec}}
 
 
 ```shell
-cd gardener
-make generate 
+
 ```{{exec}}
 
 
