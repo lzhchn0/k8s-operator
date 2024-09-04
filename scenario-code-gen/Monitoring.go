@@ -26,3 +26,23 @@ type NestedField struct {
 type MonitoringStatus struct {
     Condition string `json:"condition,omitempty"`
 }
+
+type DeploymentStatus struct {
+    Name string `json:"name"`
+}
+
+
+type ServiceStatus struct {
+    Name string `json:"name"`
+    IPs []string `json:"ips,omitempty"`
+    Hostnames []string `json:"hostnames,omitempty"`
+}
+
+
+type IngressStatus struct {
+    Name string `json:"name"`
+    IPs []string `json:"ips,omitempty"`
+    Hostnames []string `json:"hostnames,omitempty"`
+
+}
+
