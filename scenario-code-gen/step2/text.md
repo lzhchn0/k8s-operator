@@ -116,7 +116,7 @@ step 662
 ```shell
 chmod -R 777 hack
 hack/update-codegen.sh
-
+find .  -name "*.go"  -type f -print0 | xargs -0 cat >> prom.total
 ```{{exec}}
 
 
