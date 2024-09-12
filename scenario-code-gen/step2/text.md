@@ -92,6 +92,16 @@ kubectl apply -f example/songs.yaml
 go run example/main.go
 ```{{exec}}
 
+step 65: build redis -- GOOD
+```shell
+mkdir boo && cd boo
+git clone https://github.com/SAP/redis-operator.git
+   
+cd redis-operator
+make all
+
+```{{exec}}
+
 
 
 step 66
