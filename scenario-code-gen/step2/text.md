@@ -80,6 +80,11 @@ step 64
 
 ```{{exec}}
 
+step 642
+```shell
+apt-get install tree
+```{{exec}}
+
 
 step 65: install and verify the installation -- GOOD
 ```shell
@@ -92,7 +97,7 @@ kubectl apply -f example/songs.yaml
 go run example/main.go
 ```{{exec}}
 
-step 65: build redis -- GOOD
+step 65: build SAP/redis -- GOOD
 ```shell
 mkdir boo && cd boo
 git clone https://github.com/SAP/redis-operator.git
