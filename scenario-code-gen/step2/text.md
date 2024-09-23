@@ -89,7 +89,7 @@ apt-get install tree
 step 65: install and verify the installation -- GOOD
 ```shell
 mkdir boo && cd boo
-git init
+# git init
 git clone https://github.com/sportshead/codegen-demo.git
 cd codegen-demo
 kubectl apply -f crd.yaml
