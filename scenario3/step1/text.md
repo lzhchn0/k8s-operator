@@ -5,6 +5,12 @@ blabla:
   toolchain go1.22.3
 
 
+Go version 1.23.0
+```shell
+curl -OL  https://go.dev/dl/go1.23.0.linux-amd64.tar.gz \
+&&  rm -rf /usr/local/go && tar -C /usr/local -xzf go1.23.0.linux-amd64.tar.gz
+```{{exec}}
+
 Go version 1.22.0
 ```shell
 curl -OL  https://go.dev/dl/go1.22.0.linux-amd64.tar.gz \
