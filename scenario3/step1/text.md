@@ -131,7 +131,7 @@ alias kn='f() { [ "$1" ] && kubectl config set-context --current --namespace $1 
 
 export d=describe
 export now="--grace-period=0 --force"
-export do="-o yaml --dryrun=client"
+export do="-o yaml --dry-run=client"
 ```{{exec}}
 
 Setup vim
