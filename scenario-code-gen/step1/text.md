@@ -24,6 +24,14 @@ export now="--grace-period=0 --force"
 export do="-o yaml --dryrun=client"
 ```{{exec}}
 
+```shell
+alias finds="find . -name '*.go' -type f -exec grep -inH "
+alias findy="find . -name '*.yaml' -type f -exec grep -inH "
+
+alias  trim='sed "s/^[\t ]*//g"i'
+```{{exec}}
+
+
 Setup vim
 ```shell
 chmod +w ~/.vimrc
