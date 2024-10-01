@@ -43,8 +43,10 @@ echo "set number"  >> ~/.vimrc
 
 Download/install kubebuilder for latest 
 ```shell
-curl -L -o kubebuilder "https://go.kubebuilder.io/dl/latest/$(go env GOOS)/$(go env GOARCH)"
-chmod +x kubebuilder && mv kubebuilder /usr/local/bin/
+
+wget https://charts.bitnami.com/bitnami/rabbitmq-cluster-operator-4.3.23.tgz
+helm install my-rab ./rabbitmq-cluster-operator-4.3.23.tgz --namespace rab --create-namespace
+
 ```{{exec}}
 
 
