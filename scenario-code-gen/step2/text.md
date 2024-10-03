@@ -80,10 +80,18 @@ step 64
 
 ```{{exec}}
 
-step 642
+step 642 -- GOOD
 ```shell
 apt-get install tree
 ```{{exec}}
+
+
+step 643 -- ??
+```shell
+helm upgrade -i redis-operator oci://ghcr.io/sap/redis-operator-helm/redis-operator
+```{{exec}}
+
+
 
 
 step 65: install and verify the installation -- GOOD
