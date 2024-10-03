@@ -86,7 +86,8 @@ apt-get install tree
 ```{{exec}}
 
 
-step 643 -- ??
+step 643 -- GOOD
+https://killercoda.com/walllnerryan/scenario/k8s-redis-sentinal-lab
 ```shell
 helm upgrade -i redis-operator oci://ghcr.io/sap/redis-operator-helm/redis-operator
 ```{{exec}}
