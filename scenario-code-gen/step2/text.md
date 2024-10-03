@@ -100,6 +100,12 @@ https://killercoda.com/walllnerryan/scenario/k8s-redis-sentinal-lab
 helm upgrade -i redis-operator oci://ghcr.io/sap/redis-operator-helm/redis-operator
 ```{{exec}}
 
+step 644 -- GOOD -- install a redis 
+```shell
+helm install redis -f values.yaml bitnami/redis
+kubectl create -f app.yaml
+```{{exec}}
+
 
 
 
