@@ -77,12 +77,20 @@ step 63:
 
 step 64
 ```shell
-
+ 
 ```{{exec}}
 
 step 642 -- GOOD
 ```shell
 apt-get install tree
+```{{exec}}
+
+
+
+step 643
+```shell
+helm repo add bitnami https://charts.bitnami.com/bitnami
+helm repo update
 ```{{exec}}
 
 
