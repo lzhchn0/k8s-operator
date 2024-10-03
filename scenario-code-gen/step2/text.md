@@ -169,21 +169,62 @@ find .  -name "*.go"  -type f -print0 | xargs -0 cat >> prom.total
 --output-package="github.com/codegen-demo/pkg/generated/informers"
 ```{{exec}}
 
-```shell
-
-```{{exec}}
-
-
 
 ```shell
 
 ```{{exec}}
 
 
+```shell
 
+```{{exec}}
 
 ```shell
 
+```{{exec}}
+
+
+step 655 GOOD - create tls.crt
+```shell
+openssl genrsa -out tls.key 2048
+openssl req -new -key tls.key -out tls.csr -subj "/CN=webhook-server"
+openssl x509 -req -in tls.csr -signkey tls.key -out tls.crt -days 365
+kubectl create secret tls webhook-server-cert --cert=tls.crt --key=tls.key -n <namespace>
+```{{exec}}
+
+
+
+```shell
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webhook-server
+  namespace: <namespace>
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: webhook-server
+    spec:
+      containers:
+      - name: webhook-server
+        image: your-webhook-server-image
+        volumeMounts:
+        - name: webhook-certs
+          mountPath: /tmp/k8s-webhook-server/serving-certs
+          readOnly: true
+      volumes:
+      - name: webhook-certs
+        secret:
+          secretName: webhook-server-cert
+```{{exec}}
+
+
+
+
+```shell
+cp tls*  /tmp/k8s-webhook-server/serving-certs/
 ```{{exec}}
 
 
