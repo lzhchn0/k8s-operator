@@ -184,7 +184,7 @@ find .  -name "*.go"  -type f -print0 | xargs -0 cat >> prom.total
 ```{{exec}}
 
 
-step 655 GOOD - create tls.crt
+step 655 GOOD - create tls.crt  tls.csr  tls.key
 ```shell
 openssl genrsa -out tls.key 2048
 openssl req -new -key tls.key -out tls.csr -subj "/CN=webhook-server"
