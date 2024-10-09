@@ -45,7 +45,7 @@ echo "set number"  >> ~/.vimrc
 ```shell
 
 wget https://charts.bitnami.com/bitnami/rabbitmq-cluster-operator-4.3.23.tgz
-helm install my-rab ./rabbitmq-cluster-operator-4.3.23.tgz --namespace rab --create-namespace
+helm install my-rab ./rabbitmq-cluster-operator-4.3.23.tgz --namespace rabbit --create-namespace
 
 ```{{exec}}
 
