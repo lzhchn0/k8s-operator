@@ -41,7 +41,7 @@ echo "set number"  >> ~/.vimrc
 
 
 
-Download/install kubebuilder for latest 
+# Download/install rabbitmq 
 ```shell
 
 wget https://charts.bitnami.com/bitnami/rabbitmq-cluster-operator-4.3.23.tgz
