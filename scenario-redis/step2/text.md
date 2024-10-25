@@ -70,7 +70,7 @@ kubectl get pods
 ```{{exec}} 
 
 
-upload redis operator
+upload redis operator from ~/boo/redis-operator-000/bin/manager
 ```shell
 ```{{exec}}
 
