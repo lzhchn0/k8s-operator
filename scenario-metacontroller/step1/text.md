@@ -41,41 +41,6 @@ echo "set number"  >> ~/.vimrc
 
 
 
-# Download/install rabbitmq operator
-```shell
-
-wget https://charts.bitnami.com/bitnami/rabbitmq-cluster-operator-4.3.23.tgz
-helm install my-rab ./rabbitmq-cluster-operator-4.3.23.tgz --namespace rabbit --create-namespace
-
-```{{exec}}
 
 
 
-# Download/install rabbitmq 
-```shell
-
-kubectl create namespace rabbit-system
-
-helm repo add stable https://charts.helm.sh/stable
-
-helm install rabbit --set service.type=NodePort stable/rabbitmq --namespace rabbit-system
-
-```{{exec}}
-
-
-# show the credential 
-```shell
-echo $(kubectl get secret --namespace rabbit mu-rabbit-rabbitmq -o jsonpath="{.data.rabbitmq-password}" | base64 --decode)
-```{{exec}}
-
-
-# forward the port 5672 to external 
-```shell
-kubectl port-forward --namespace rabbit svc/mu-rabbit-rabbitmq 5672:5672
-```{{exec}}
-
-
-# forward the port 15672 to external 
-```shell
-kubectl port-forward --namespace rabbit svc/mu-rabbit-rabbitmq 15672:15672
-```{{exec}}
