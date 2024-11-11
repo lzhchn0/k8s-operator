@@ -169,7 +169,7 @@ spec:
     app: hello-controller
   ports:
   - port: 80
-EOF 
+EOF
 ```{{exec}}
  
 ```shell
@@ -185,7 +185,7 @@ metadata:
   name: your-name
 spec:
   who: Your Name
-EOF 
+EOF
 ```{{exec}}
  
 ```shell
