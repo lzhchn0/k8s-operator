@@ -16,13 +16,14 @@ kubectl create configmap -n metacontroller gt-app-templates --from-file=template
 
 
 ```shell
- 
+wget https://raw.githubusercontent.com/gtanand1994/ideas2crd/main/gt-apps/crd.yaml 
 ```{{exec}}
 
 
 
 ```shell
- 
+kubectl get crd|grep gtapp
+kubectl api-resources|grep gtapp 
 ```{{exec}}
 
 
