@@ -37,6 +37,7 @@ spec:
                 type: string
     subresources:
      status: {}
+EOF
 ```{{exec}}
 
 
@@ -67,6 +68,7 @@ spec:
     sync:
       webhook:
         url: http://hello-controller.hello/sync
+EOF
 ```{{exec}}
 
 ^^ 
