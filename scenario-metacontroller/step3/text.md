@@ -78,6 +78,7 @@ kubectl apply -f controller.yaml
 ```{{exec}}
  
 ```shell
+cat <<EOF  > sync.py
 from http.server import BaseHTTPRequestHandler, HTTPServer
 import json
 
@@ -123,7 +124,7 @@ class Controller(BaseHTTPRequestHandler):
     self.wfile.write(json.dumps(desired).encode())
 
 HTTPServer(("", 80), Controller).serve_forever()
- 
+EOF 
 ```{{exec}}
  
 ```shell
@@ -132,6 +133,7 @@ kubectl -n hello create configmap hello-controller --from-file=sync.py
 ```{{exec}}
  
 ```shell
+cat <<EOF  > webhook.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -167,7 +169,7 @@ spec:
     app: hello-controller
   ports:
   - port: 80
- 
+EOF 
 ```{{exec}}
  
 ```shell
@@ -176,13 +178,14 @@ kubectl -n hello apply -f webhook.yaml
 ```{{exec}}
  
 ```shell
+cat <<EOF  > hello.yaml
 apiVersion: example.com/v1
 kind: HelloWorld
 metadata:
   name: your-name
 spec:
   who: Your Name
- 
+EOF 
 ```{{exec}}
  
 ```shell
