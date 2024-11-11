@@ -1,0 +1,38 @@
+{
+  "title": "Scenario Metacontroller",
+  "description": "This is the description of scenario Metacontroller",
+  "details": {
+    "intro": {
+      "text": "intro.md"
+    },
+  
+
+    "steps": [
+      {
+        "title": "build environment - 1 / 10",
+        "text": "step1/text.md"
+      },
+      {
+        "title": "build redis-cluster - 2 / 10",
+        "text": "step2/text.md"
+      },
+      {
+        "title": "build redis-cluster - 3 / 10",
+        "text": "step3/text.md"
+      },     
+      {
+        "title": "build gardener - 4 / 10",
+        "text": "step4/text.md"
+      },         
+      {
+        "title": "build gardener - 5 / 10",
+        "text": "step5/text.md"
+      }         
+    ]
+
+  },
+  
+  "backend": {
+    "imageid": "kubernetes-kubeadm-2nodes-rapid"
+  }
+}
