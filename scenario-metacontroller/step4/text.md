@@ -8,6 +8,8 @@ wget https://raw.githubusercontent.com/gtanand1994/ideas2crd/main/gt-apps/contro
 
 
 ```shell
+kubectl create configmap -n metacontroller gt-app-controller --from-file=app
+kubectl create configmap -n metacontroller gt-app-templates --from-file=templates
  
 ```{{exec}}
 
