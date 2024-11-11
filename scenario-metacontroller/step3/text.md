@@ -10,7 +10,7 @@ kubectl create namespace hello
 
 
 ```shell
-
+cat <<EOF  > crd.yaml
 apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
@@ -48,6 +48,7 @@ kubectl apply -f crd.yaml
 
 ^^ 
 ```shell
+cat <<EOF  > controller.yaml
 apiVersion: metacontroller.k8s.io/v1alpha1
 kind: CompositeController
 metadata:
