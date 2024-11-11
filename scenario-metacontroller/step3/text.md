@@ -124,7 +124,7 @@ class Controller(BaseHTTPRequestHandler):
     self.wfile.write(json.dumps(desired).encode())
 
 HTTPServer(("", 80), Controller).serve_forever()
-EOF 
+EOF
 ```{{exec}}
  
 ```shell
