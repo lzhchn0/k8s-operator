@@ -1,5 +1,6 @@
 Setup a Composite Controller.
- 
+
+Create Custom resource definition for parent resource
 ```shell
 wget https://raw.githubusercontent.com/gtanand1994/ideas2crd/main/gt-apps/controller.yaml
  
