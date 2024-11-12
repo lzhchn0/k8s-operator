@@ -5,7 +5,7 @@ step 3
 
 ```shell
 kubectl create namespace hello
- 
+kn hello 
 ```{{exec}}
 
 
