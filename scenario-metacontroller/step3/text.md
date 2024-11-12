@@ -132,6 +132,7 @@ EOF
 ^^==
 
 ```shell
+cat <<EOF  > sync.py
 from http.server import BaseHTTPRequestHandler, HTTPServer
 import json
 
@@ -194,6 +195,7 @@ class Controller(BaseHTTPRequestHandler):
     self.wfile.write(json.dumps(desired).encode())
 
 HTTPServer(("", 80), Controller).serve_forever()
+EOF
 ```{{exec}}
 
 
