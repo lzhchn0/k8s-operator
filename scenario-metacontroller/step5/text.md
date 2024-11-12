@@ -12,16 +12,16 @@ cd /root/metacontroller/examples/indexedjob
 
 
 ```shell
- 
+kubectl apply -k v1 
 ```{{exec}}
 
 
 
 ```shell
- 
+kubectl apply -f my-indexedjob.yaml 
 ```{{exec}}
 
 
 ```shell
- 
+$ kubectl logs print-index-2 
 ```{{exec}}
