@@ -8,3 +8,20 @@ git clone https://github.com/metacontroller/metacontroller.git
 ```shell
 cd /root/metacontroller/examples/indexedjob
 ```{{exec}}
+
+
+
+```shell
+ 
+```{{exec}}
+
+
+
+```shell
+ 
+```{{exec}}
+
+
+```shell
+ 
+```{{exec}}
