@@ -1,8 +1,8 @@
 Install metacontroller.
 
-
-user is 'admin'
-pwd is 'admin' 
+- clusterrole
+- user is 'admin'
+- pwd is 'admin' 
 ```shell
 kubectl create clusterrolebinding my-cluster-admin-binding --clusterrole=cluster-admin --user=admin@admin
 
