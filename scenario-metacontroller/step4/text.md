@@ -35,7 +35,7 @@ git clone https://github.com/gtanand1994/ideas2crd.git
 
 
 ```shell
- 
+cd ideas2crd/gt-apps
 ```{{exec}}
 
 
