@@ -46,7 +46,8 @@ kn metacontroller
 
 
 ```shell
- 
+k apply -f controller.yaml
+k apply -f crd.yaml 
 ```{{exec}}
 
 
