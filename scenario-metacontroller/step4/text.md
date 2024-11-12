@@ -29,7 +29,7 @@ kubectl api-resources|grep gtapp
 
 
 ```shell
- 
+git clone https://github.com/gtanand1994/ideas2crd.git
 ```{{exec}}
 
 
