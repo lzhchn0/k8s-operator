@@ -40,7 +40,7 @@ cd ideas2crd/gt-apps
 
 
 ```shell
- 
+kn metacontroller
 ```{{exec}}
 
 
