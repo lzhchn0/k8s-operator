@@ -51,11 +51,11 @@ k apply -f crd.yaml
 ```{{exec}}
 
 
-Bluegreen deployment
+- Bluegreen deployment
 
 
 ```shell
-make build 
+make generate_crds
 ```{{exec}}
 
 
