@@ -73,6 +73,6 @@ make unit-test
 
 
 ```shell
- 
+k create cm bluegreen-controller 
 ```{{exec}}
 
