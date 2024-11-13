@@ -73,6 +73,6 @@ make unit-test
 
 
 ```shell
-k create cm bluegreen-controller 
+k create configmap bluegreen-controller  -n metacontroller  --from-file=sync.js
 ```{{exec}}
 
