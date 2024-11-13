@@ -52,19 +52,22 @@ k apply -f crd.yaml
 
 
 Bluegreen deployment
+
+
+```shell
+make build 
+```{{exec}}
+
+
 ```shell
 kubectl apply -f my-bluegreen.yaml
 ```{{exec}}
 
 
 
-```shell
- 
-```{{exec}}
-
 
 ```shell
- 
+make unit-test
 ```{{exec}}
 
 
