@@ -51,9 +51,9 @@ k apply -f crd.yaml
 ```{{exec}}
 
 
-
+Bluegreen deployment
 ```shell
- 
+kubectl apply -f my-bluegreen.yaml
 ```{{exec}}
 
 
