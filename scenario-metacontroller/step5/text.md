@@ -1,4 +1,4 @@
-Setup a appropriate environment.
+Setup a bluegreen metacontroller.
  
 ```shell
 git clone https://github.com/metacontroller/metacontroller.git 
@@ -9,6 +9,7 @@ git clone https://github.com/metacontroller/metacontroller.git
 cd /root/metacontroller/examples/bluegreen
 ```{{exec}}
 
+- manifests
 
 ```shell
 make generate_crds
