@@ -51,16 +51,15 @@ k apply -f crd.yaml
 ```{{exec}}
 
 
-- Bluegreen deployment
 
 
 ```shell
-make generate_crds
+kubectl apply -f my-indexedjob.yaml 
 ```{{exec}}
 
 
 ```shell
-kubectl apply -f my-bluegreen.yaml
+$ kubectl logs print-index-2 
 ```{{exec}}
 
 
@@ -71,8 +70,4 @@ make unit-test
 ```{{exec}}
 
 
-
-```shell
-k create configmap bluegreen-controller  -n metacontroller  --from-file=sync.js
-```{{exec}}
 
