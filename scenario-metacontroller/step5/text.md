@@ -19,3 +19,15 @@ make generate_crds
 kubectl apply -k v1 
 ```{{exec}}
 
+
+
+```shell
+kubectl apply -f my-bluegreen.yaml
+```{{exec}}
+
+
+
+```shell
+k create configmap bluegreen-controller  -n metacontroller  --from-file=sync.js
+```{{exec}}
+
