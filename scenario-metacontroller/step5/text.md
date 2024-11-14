@@ -20,7 +20,7 @@ kubectl apply -k v1
 ```{{exec}}
 
 
-
+- change replicas here, 
 ```shell
 kubectl apply -f my-bluegreen.yaml
 ```{{exec}}
