@@ -6,22 +6,16 @@ git clone https://github.com/metacontroller/metacontroller.git
 
 
 ```shell
-cd /root/metacontroller/examples/indexedjob
+cd /root/metacontroller/examples/bluegreen
 ```{{exec}}
 
+
+```shell
+make generate_crds
+```{{exec}}
 
 
 ```shell
 kubectl apply -k v1 
 ```{{exec}}
 
-
-
-```shell
-kubectl apply -f my-indexedjob.yaml 
-```{{exec}}
-
-
-```shell
-$ kubectl logs print-index-2 
-```{{exec}}
