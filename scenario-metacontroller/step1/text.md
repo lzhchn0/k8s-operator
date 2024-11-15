@@ -39,8 +39,9 @@ echo ""  >> ~/.vimrc
 echo "set number"  >> ~/.vimrc
 ```{{exec}}
 
-
-
-
-
-
+- Setup kubetail
+```shell
+curl -LO https://raw.githubusercontent.com/johanhaleby/kubetail/master/kubetail
+chmod +x kubetail
+sudo mv kubetail /usr/local/bin/
+```{{exec}}
