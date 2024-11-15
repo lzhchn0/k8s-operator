@@ -29,6 +29,8 @@ kubectl apply -f my-bluegreen.yaml
 
 
 ```shell
+cd /root/metacontroller/examples/bluegreen/manifest
 k create configmap bluegreen-controller  -n metacontroller  --from-file=sync.js
+k apply -f bluegreen-controller.yaml
 ```{{exec}}
 
