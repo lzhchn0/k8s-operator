@@ -10,8 +10,9 @@ cd /root/metacontroller/examples/bluegreen
 ```{{exec}}
 
 - manifests
-
+- nov 18
 ```shell
+make build
 make generate_crds
 ```{{exec}}
 
