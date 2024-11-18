@@ -27,7 +27,11 @@
       {
         "title": "bluegreen deployment - 5 / 10",
         "text": "step5/text.md"
-      }         
+      },         
+      {
+        "title": "triage k8s cluster - 6 / 10",
+        "text": "step6/text.md"
+      }               
     ]
 
   },
