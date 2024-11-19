@@ -16,7 +16,7 @@ make build
 make generate_crds
 ```{{exec}}
 
-
+- install meta-controller
 ```shell
 kubectl apply -k v1 
 ```{{exec}}
