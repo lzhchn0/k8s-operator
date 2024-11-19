@@ -46,3 +46,8 @@ k apply -f bluegreen-controller.yaml
 ```shell
 watch "kubectl get pods -n default --show-labels  &&  kubectl get rs -n default && kubectl get svc -n default "
 ```{{exec}}
+
+
+```shell
+watch "kubectl get pods -n default -o yaml | grep 'image:'   "
+```{{exec}}
