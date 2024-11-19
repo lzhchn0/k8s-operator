@@ -27,6 +27,9 @@ kubectl apply -k v1
 kubectl apply -f my-bluegreen.yaml
 ```{{exec}}
 
+```shell
+kubectl -n metacontroller logs --tail=25 -l app=bluegreen-controller
+```{{exec}}
 
 
 ```shell
