@@ -16,12 +16,12 @@ make build
 make generate_crds
 ```{{exec}}
 
-- install meta-controller
+- deploy bluegreen-controller
 ```shell
 kubectl apply -k v1 
 ```{{exec}}
 
-
+- create a bluegreen-deployment
 - change replicas here, 
 ```shell
 kubectl apply -f my-bluegreen.yaml
