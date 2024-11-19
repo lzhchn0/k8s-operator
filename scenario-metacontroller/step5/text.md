@@ -38,3 +38,7 @@ k create configmap bluegreen-controller  -n metacontroller  --from-file=sync.js
 k apply -f bluegreen-controller.yaml
 ```{{exec}}
 
+
+```shell
+watch "kubectl get pods -n default --show-labels  &&  kubectl get rs -n default && kubectl get svc -n default "
+```{{exec}}
