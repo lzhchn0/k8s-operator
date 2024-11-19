@@ -21,6 +21,12 @@ make generate_crds
 kubectl apply -k v1 
 ```{{exec}}
 
+-- revised bluegreen-controller
+```shell
+kubectl replace -k v1   $now
+```{{exec}}
+
+
 - create a bluegreen-deployment
 - change replicas here, 
 ```shell
