@@ -31,6 +31,10 @@ kubectl apply -f my-bluegreen.yaml
 kubectl -n metacontroller logs --tail=25 -l app=bluegreen-controller
 ```{{exec}}
 
+```shell
+ssh node01
+watch crictl ps
+```{{exec}}
 
 ```shell
 cd /root/metacontroller/examples/bluegreen/manifest
