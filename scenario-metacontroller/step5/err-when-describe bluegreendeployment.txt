@@ -1,0 +1,13 @@
+Events:
+  Type     Reason     Age                 From            Message
+  ----     ------     ----                ----            -------
+  Warning  SyncError  19s (x14 over 60s)  metacontroller  Sync error: sync hook failed for BlueGreenDeployment default/nginx: sync hook failed: unsupported status code: 500 body: TypeError: Cannot read property 'metadata' of undefined
+    at newReplicaSet (/node/hooks/..2024_11_20_19_27_51.1771312712/sync.js:50:33)
+    at module.exports (/node/hooks/..2024_11_20_19_27_51.1771312712/sync.js:137:7)
+    at IncomingMessage.request.on.on.on (/node/server.js:56:5)
+    at emitNone (events.js:106:13)
+    at IncomingMessage.emit (events.js:208:7)
+    at endReadableNT (_stream_readable.js:1056:12)
+    at _combinedTickCallback (internal/process/next_tick.js:138:11)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+controlplane $ k describe  bluegreendeployments.ctl.enisoc.com  nginx 
