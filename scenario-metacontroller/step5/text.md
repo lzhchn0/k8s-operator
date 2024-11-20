@@ -57,3 +57,15 @@ watch "kubectl get pods -n default --show-labels  &&  kubectl get rs -n default 
 ```shell
 watch "kubectl get pods -n default -o yaml | grep 'image:'   "
 ```{{exec}}
+
+
+```shell
+kn  metacontroller
+```{{exec}}
+
+
+```shell
+kn  default
+```{{exec}}
+
+
