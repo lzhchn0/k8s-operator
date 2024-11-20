@@ -69,6 +69,11 @@ kn  metacontroller
 kn  default
 ```{{exec}}
 
+
+```shell
+find . -name '*.go' -mtime -2
+```{{exec}}
+
 upload api/types.go
 upload my-bluegreendeployment.yaml
 
