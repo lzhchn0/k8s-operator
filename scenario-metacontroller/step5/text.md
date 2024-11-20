@@ -14,7 +14,7 @@ cd /root/metacontroller/examples/bluegreen
 ```shell
 make build
 make generate_crds
-make build
+make
 ```{{exec}}
 
 - deploy bluegreen-controller
