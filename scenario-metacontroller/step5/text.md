@@ -71,6 +71,12 @@ kn  default
 
 
 ```shell
+edit manifests/sync.js
+```{{exec}}
+
+
+
+```shell
 find . -name '*.go' -mtime -2
 ```{{exec}}
 
