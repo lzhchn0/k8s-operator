@@ -87,6 +87,25 @@ edit manifests/sync.js
 find . -name '*.go' -mtime -2
 ```{{exec}}
 
+
+
+```shell
+kn  metacontroller
+kubetail meta
+```{{exec}}
+
+
+
+```shell
+kn  metacontroller
+kubetail blue
+```{{exec}}
+
+
+
+
+
+
 upload api/types.go
 upload my-bluegreendeployment.yaml
 
