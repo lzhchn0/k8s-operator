@@ -68,4 +68,6 @@ kn  metacontroller
 kn  default
 ```{{exec}}
 
+upload api/types.go
+upload my-bluegreendeployment.yaml
 
