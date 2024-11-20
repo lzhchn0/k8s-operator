@@ -53,8 +53,10 @@ sudo apt update
 sudo apt install yq -y
 ```{{exec}}
 
-
+- delete 'description' fields in yaml file crdv1.yaml
 ```shell
+yq eval -o=json crdv1.yaml  | jq 'walk(if type == "object" then del(.description) else . end)'   > tt0.yaml
+yq eval tt0.yaml -P  > crdv1-new.yaml
 ```{{exec}}
 
 
