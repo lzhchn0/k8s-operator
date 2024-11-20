@@ -45,3 +45,30 @@ curl -LO https://raw.githubusercontent.com/johanhaleby/kubetail/master/kubetail
 chmod +x kubetail
 sudo mv kubetail /usr/local/bin/
 ```{{exec}}
+
+- Setup yq
+```shell
+sudo add-apt-repository ppa:rmescandon/yq
+sudo apt update
+sudo apt install yq -y
+```{{exec}}
+
+
+```shell
+```{{exec}}
+
+
+```shell
+```{{exec}}
+
+
+```shell
+```{{exec}}
+
+
+```shell
+```{{exec}}
+
+```shell
+```{{exec}}
+
