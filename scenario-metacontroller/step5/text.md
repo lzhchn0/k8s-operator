@@ -108,12 +108,14 @@ kubectl get bluegreendeployments.ctl.enisoc.com nginx -o yaml | grep -i color
 
 ```shell
 export bgd="bluegreendeployments"
-kubectl patch $bgd nginx --type=merge -p '{"spec":{"template":{"metadata":{"labels":{"new":"label"}}}}}'
+kubectl patch $bgd nginx --type=merge -p '{"spec":{"bluetemplate":{"metadata":{"labels":{"new":"label"}}}}}'
+kubectl patch $bgd nginx --type=merge -p '{"spec":{"greentemplate":{"metadata":{"labels":{"new":"label"}}}}}'
 ```{{exec}}
 
 
 ```shell
-kubectl patch $bgd nginx --type=merge -p '{"spec":{"template":{"metadata":{"labels":{"new2":"label2"}}}}}'
+kubectl patch $bgd nginx --type=merge -p '{"spec":{"bluetemplate":{"metadata":{"labels":{"new2":"label2"}}}}}'
+kubectl patch $bgd nginx --type=merge -p '{"spec":{"greentemplate":{"metadata":{"labels":{"new2":"label2"}}}}}'
 ```{{exec}}
 
 
