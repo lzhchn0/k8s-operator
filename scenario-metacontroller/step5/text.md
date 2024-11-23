@@ -17,18 +17,18 @@ make generate_crds
 make
 ```{{exec}}
 
-- deploy bluegreen-controller
+- 2. deploy bluegreen-controller
 ```shell
 kubectl apply -k v1 
 ```{{exec}}
 
--- revised bluegreen-controller
+- 3. revised bluegreen-controller
 ```shell
 kubectl replace -k v1   $now
 ```{{exec}}
 
 
-- create a bluegreen-deployment
+- 1. create a bluegreen-deployment
 - change replicas here, 
 ```shell
 kubectl apply -f my-bluegreen.yaml
