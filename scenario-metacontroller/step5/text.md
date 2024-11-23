@@ -119,6 +119,14 @@ kubectl patch $bgd nginx --type=merge -p '{"spec":{"greentemplate":{"metadata":{
 ```{{exec}}
 
 
+
+```shell
+grep creationTimestamp  tt2
+"activeColor": "blue",
+```{{exec}}
+
+
+
 upload api/types.go
 upload my-bluegreendeployment.yaml
 
