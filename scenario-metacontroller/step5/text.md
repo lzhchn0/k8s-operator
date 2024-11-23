@@ -102,8 +102,9 @@ kn  metacontroller
 kubetail blue
 ```{{exec}}
 
-
-
+```shell
+kubectl get bluegreendeployments.ctl.enisoc.com nginx -o yaml | grep -i color
+```{{exec}}
 
 
 
