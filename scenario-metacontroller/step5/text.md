@@ -7,6 +7,7 @@ git clone https://github.com/metacontroller/metacontroller.git
 
 ```shell
 cd /root/metacontroller/examples/bluegreen
+kn  metacontroller
 ```{{exec}}
 
 - manifests
