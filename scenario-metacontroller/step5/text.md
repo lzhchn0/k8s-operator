@@ -29,11 +29,6 @@ kubectl replace -k v1   $now
 ```{{exec}}
 
 
-- 1. create a bluegreen-deployment
-- change replicas here, 
-```shell
-kubectl apply -f my-bluegreen.yaml
-```{{exec}}
 
 ```shell
 kubectl -n metacontroller logs --tail=25 -l app=bluegreen-controller
@@ -49,6 +44,15 @@ cd /root/metacontroller/examples/bluegreen/manifest
 k create configmap bluegreen-controller  -n metacontroller  --from-file=sync.js
 k apply -f bluegreen-controller.yaml
 ```{{exec}}
+
+
+- 1. create a bluegreen-deployment
+- change replicas here, 
+```shell
+kubectl apply -f my-bluegreen.yaml
+```{{exec}}
+
+
 
 ```shell
 kn  metacontroller
