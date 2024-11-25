@@ -53,6 +53,15 @@ kubectl apply -f my-bluegreen.yaml
 ```{{exec}}
 
 
+- update configmap,
+```shell
+kn  metacontroller
+kubectl delete deploy bluegreen-controller $now
+cd /root/metacontroller/examples/bluegreen/manifest
+kubectl delete configmap bluegreen-controller  -n metacontroller  $now
+kubectl create configmap bluegreen-controller  -n metacontroller  --from-file=sync.js
+k apply -f bluegreen-controller.yaml
+```{{exec}}
 
 ```shell
 kn  metacontroller
@@ -62,6 +71,7 @@ kubectl create configmap bluegreen-controller  -n metacontroller  --from-file=sy
 kubectl rollout restart deploy/bluegreen-controller
 kubetail  bluegreen --since 44m  >  tt0
 ```{{exec}}
+
 
 
 ```shell
