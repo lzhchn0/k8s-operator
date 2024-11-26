@@ -150,7 +150,7 @@ grep creationTimestamp  tt2
 
 monitor all the objects in metacontroller, 
 ```shell
-kubectl get bluegreendeployments.ctl.enisoc.com,pods,deploy,svc,cm  -o wide
+watch "kubectl get bluegreendeployments.ctl.enisoc.com,pods,deploy,svc,cm  -o wide "
 ```{{exec}}
 
 
