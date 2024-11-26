@@ -49,6 +49,7 @@ k apply -f bluegreen-controller.yaml
 - 1. create a bluegreen-deployment
 - change replicas here, 
 ```shell
+cd /root/metacontroller/examples/bluegreen
 kubectl apply -f my-bluegreen.yaml
 ```{{exec}}
 
