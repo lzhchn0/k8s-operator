@@ -10,149 +10,30 @@ cd /root/metacontroller/examples/indexedjob
 kn  metacontroller
 ```{{exec}}
 
-- manifests
-- nov 18
+- 1. apply manifest 
 ```shell
-make build
-make generate_crds
-make
+cd /root/metacontroller/examples/indexedjob/manifest
+kubectl create configmap indexedjob-controller -n metacontroller --from-file=sync.py
+kubectl apply -f indexedjob-controller.yaml
 ```{{exec}}
 
-- 2. deploy bluegreen-controller
+
+- 2. deploy v1
 ```shell
+cd /root/metacontroller/examples/indexedjob
 kubectl apply -k v1 
 ```{{exec}}
 
-- 3. revised bluegreen-controller
+- 3. deploy customized indexed-job 
 ```shell
-kubectl replace -k v1   $now
+cd /root/metacontroller/examples/indexedjob
+kubectl  apply -f my-indexedjob.yaml
 ```{{exec}}
 
 
+- 4. check logs 
 
 ```shell
-kubectl -n metacontroller logs --tail=25 -l app=bluegreen-controller
+watch " kubectl logs print-index-0;kubectl logs print-index-1;kubectl logs print-index-2;kubectl logs print-index-3;kubectl logs print-index-4;kubectl logs print-index-5;
+kubectl logs print-index-6;kubectl logs print-index-7;kubectl logs print-index-8;kubectl logs print-index-9; "
 ```{{exec}}
-
-```shell
-ssh node01
-watch crictl ps
-```{{exec}}
-
-```shell
-cd /root/metacontroller/examples/bluegreen/manifest
-k create configmap bluegreen-controller  -n metacontroller  --from-file=sync.js
-k apply -f bluegreen-controller.yaml
-```{{exec}}
-
-
-- 1. create a bluegreen-deployment
-- change replicas here, 
-```shell
-cd /root/metacontroller/examples/bluegreen
-kubectl apply -f my-bluegreen.yaml
-```{{exec}}
-
-
-- update configmap,
-```shell
-kn  metacontroller
-kubectl delete deploy bluegreen-controller $now
-cd /root/metacontroller/examples/bluegreen/manifest
-kubectl delete configmap bluegreen-controller  -n metacontroller  $now
-kubectl create configmap bluegreen-controller  -n metacontroller  --from-file=sync.js
-k apply -f bluegreen-controller.yaml
-```{{exec}}
-
-```shell
-kn  metacontroller
-cd /root/metacontroller/examples/bluegreen/manifest
-kubectl delete configmap bluegreen-controller  -n metacontroller  $now
-kubectl create configmap bluegreen-controller  -n metacontroller  --from-file=sync.js
-kubectl rollout restart deploy/bluegreen-controller
-kubetail  bluegreen --since 44m  >  tt0
-```{{exec}}
-
-
-
-```shell
-watch "kubectl get pods -n default --show-labels  &&  kubectl get rs -n default && kubectl get svc -n default "
-```{{exec}}
-
-
-```shell
-watch "kubectl get pods -n default -o yaml | grep 'image:'   "
-```{{exec}}
-
-
-```shell
-kn  metacontroller
-```{{exec}}
-
-
-```shell
-kn  default
-```{{exec}}
-
-
-```shell
-edit manifests/sync.js
-```{{exec}}
-
-
-
-```shell
-find . -name '*.go' -mtime -2
-```{{exec}}
-
-
-
-```shell
-kn  metacontroller
-kubetail meta
-```{{exec}}
-
-
-
-```shell
-kn  metacontroller
-kubetail blue
-```{{exec}}
-
-```shell
-kubectl get bluegreendeployments.ctl.enisoc.com nginx -o yaml | grep -i color
-```{{exec}}
-
-```shell
-export bgd="bluegreendeployments"
-kubectl patch $bgd nginx --type=merge -p '{"spec":{"bluetemplate":{"metadata":{"labels":{"new":"label"}}}}}'
-```{{exec}}
-
-```shell
-kubectl patch $bgd nginx --type=merge -p '{"spec":{"greentemplate":{"metadata":{"labels":{"new":"label"}}}}}'
-```{{exec}}
-
-
-```shell
-kubectl patch $bgd nginx --type=merge -p '{"spec":{"bluetemplate":{"metadata":{"labels":{"new2":"label2"}}}}}'
-```{{exec}}
-
-```shell
-kubectl patch $bgd nginx --type=merge -p '{"spec":{"greentemplate":{"metadata":{"labels":{"new2":"label2"}}}}}'
-```{{exec}}
-
-
-
-```shell
-grep creationTimestamp  tt2
-"activeColor": "blue",
-```{{exec}}
-
-monitor all the objects in metacontroller, 
-```shell
-watch "kubectl get bluegreendeployments.ctl.enisoc.com,pods,deploy,svc,cm  -o wide "
-```{{exec}}
-
-
-upload api/types.go
-upload my-bluegreendeployment.yaml
