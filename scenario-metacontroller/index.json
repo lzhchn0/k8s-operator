@@ -31,7 +31,11 @@
       {
         "title": "triage k8s cluster - 6 / 10",
         "text": "step6/text.md"
-      }               
+      },               
+      {
+        "title": "IndexedJob 61 / 10",
+        "text": "step61/text.md"
+      }      
     ]
 
   },
