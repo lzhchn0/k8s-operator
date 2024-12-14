@@ -24,3 +24,4 @@ Decorator Controller:
 
 the limitation of metacontroller
 - Do not support operations across multiple clusters
+- Do not support dependencies between complex stateful resources
