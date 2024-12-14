@@ -23,3 +23,4 @@ Decorator Controller:
 - Best for lightweight, non-invasive modifications
 
 the limitation of metacontroller
+- Do not support operations across multiple clusters
