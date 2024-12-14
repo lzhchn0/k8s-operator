@@ -1,4 +1,9 @@
 
+Two kinds of controllers 
+- Composite Controller
+- Decorator Controller
+
+
 Her are the key differences between Decorator Controllers and Composite Controllers in Metacontroller:
 
 Composite Controller:
