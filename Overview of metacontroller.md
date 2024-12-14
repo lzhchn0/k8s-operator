@@ -3,6 +3,10 @@ Two kinds of controllers
 - Composite Controller
 - Decorator Controller
 
+Decorator Controller has three examples
+- clusteredparent
+- service-per-pod
+- crd-roles
 
 Her are the key differences between Decorator Controllers and Composite Controllers in Metacontroller:
 
