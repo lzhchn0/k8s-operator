@@ -5,3 +5,5 @@ The enableServiceLinks parameter(in PodSpec v1) is enabled by default but is oft
 
 
 - admission controller
+
+- how to add sidecar to a pod through a metacontroller
