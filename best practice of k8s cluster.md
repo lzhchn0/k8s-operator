@@ -5,4 +5,5 @@ The enableServiceLinks parameter(in PodSpec v1) is enabled by default but is oft
 
 
 - admission controller
+admission controller is a powerful policy enforcement tool, in a given cloud native environment 
 
