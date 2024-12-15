@@ -8,7 +8,7 @@ Decorator Controller has three examples
 - service-per-pod
 - crd-roles
 
-Her are the key differences between Decorator Controllers and Composite Controllers in Metacontroller:
+Here are the key differences between Decorator Controllers and Composite Controllers in Metacontroller:
 
 Composite Controller:
 - Creates and manages complex resources that don't exist directly in Kubernetes
