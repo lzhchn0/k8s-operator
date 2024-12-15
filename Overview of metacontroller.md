@@ -26,6 +26,6 @@ Decorator Controller:
 - Does not fundamentally change the resource's core functionality
 - Best for lightweight, non-invasive modifications
 
-the limitation of metacontroller
+the constraints of metacontroller
 - Do not support operations across multiple clusters
 - Do not support dependencies between complex stateful resources
