@@ -37,3 +37,6 @@ Informer behind metacontroller
 
 Webhook
 - It is good practice to ensure that your webhooks are always fully idempotent.
+
+Worker in metacontroller
+- By default, the queue is processed by 5 workers.
