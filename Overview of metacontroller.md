@@ -29,6 +29,8 @@ Decorator Controller:
 The constraints of metacontroller
 - Do not support operations across multiple clusters
 - Do not support dependencies between complex stateful resources
+- Kubebuilder watches bigger scope than metacontroller does.
+  
 
 Informer behind metacontroller
 - The informer periodically flushes the cache and refreshes the objects from the API server. Disabling this mechanism is not feasible.
