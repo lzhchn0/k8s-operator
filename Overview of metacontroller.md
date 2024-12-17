@@ -40,5 +40,5 @@ Webhook
 - It is good practice to ensure that your webhooks are always fully idempotent.
 
 Worker in metacontroller
-- A worker is a process that handles a given webhook request. command line parameter is "--workers"
+- A worker is a process that handles a given webhook request. Its command line parameter is "--workers", refer to [Here][https://metacontroller.github.io/metacontroller/guide/configuration.html].
 - By default, the queue is processed by 5 workers.
