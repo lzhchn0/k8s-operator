@@ -35,7 +35,15 @@
       {
         "title": "IndexedJob 61 / 10",
         "text": "step61/text.md"
-      }      
+      },   
+      {
+        "title": "IndexedJob 62 / 10",
+        "text": "step62/text.md"
+      },   
+      {
+        "title": "mydep DecoratorController, python based 63 / 10",
+        "text": "step63/text.md"
+      }         
     ]
 
   },
