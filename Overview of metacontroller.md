@@ -33,6 +33,7 @@ The constraints of metacontroller
 Informer behind metacontroller
 - The informer periodically flushes the cache and refreshes the objects from the API server. Disabling this mechanism is not feasible.
 - The updated cache will trigger the reconciliation loop for each object in the cache. This mechanism helps the controller prevent any drift between the actual state and the desired state.
+- the configurable resync period
 
 
 Webhook
