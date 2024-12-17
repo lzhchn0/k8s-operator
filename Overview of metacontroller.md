@@ -26,6 +26,9 @@ Decorator Controller:
 - Does not fundamentally change the resource's core functionality
 - Best for lightweight, non-invasive modifications
 
-the constraints of metacontroller
+The constraints of metacontroller
 - Do not support operations across multiple clusters
 - Do not support dependencies between complex stateful resources
+
+Informer behind metacontroller
+- The informer periodically flushes the cache and refreshes the objects from the API server. Disabling this mechanism is not feasible.
