@@ -18,7 +18,7 @@ alias kx='f() { [ "$1" ] && kubectl config use-context $1 || kubectl config curr
 alias kn='f() { [ "$1" ] && kubectl config set-context --current --namespace $1 || kubectl config view --minify | grep namespace | cut -d" " -f6 ; } ; f'
 
 export now="--grace-period=0 --force"
-export do="-o yaml --dryrun=client"
+export do="-o yaml --dry-run=client"
  
 alias finds="find . -name '*.go' -type f -exec grep -inH "
 alias findy="find . -name '*.yaml' -type f -exec grep -inH "
