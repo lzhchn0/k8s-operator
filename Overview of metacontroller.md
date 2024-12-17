@@ -5,7 +5,7 @@ Two kinds of controllers
 
 Decorator Controller has three examples
 - clusteredparent
-- service-per-pod
+- service-per-pod (jsonnet)
 - crd-roles
 
 Here are the key differences between Decorator Controllers and Composite Controllers in Metacontroller:
