@@ -1,0 +1,7 @@
+resources:
+- mydep-controller.yaml
+configMapGenerator:
+- name: mydep-controller
+  namespace: metacontroller
+  files:
+  - sync.py
