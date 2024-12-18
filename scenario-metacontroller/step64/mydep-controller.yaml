@@ -7,10 +7,10 @@ spec:
   generateSelector: true
   parentResource:
     apiVersion: ctl.enisoc.com/v1
-    resource: indexedjobs
+    resource: mydepparent
   childResources:
     - apiVersion: v1
-      resource: pods
+      resource: deployment
   hooks:
     sync:
       webhook:
