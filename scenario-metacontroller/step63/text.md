@@ -45,6 +45,11 @@ curl -H 'Content-Type: application/json' \
        http://10.96.3.237/sync  
 ```{{exec}}
 
+- POST a command to webhook
+```shell
+kubectl run tmp --restart=Never --rm --image=nginx:alpine -i -- curl -d '{ "title":"foo","body":"bar", "id": 1}' -H 'Content-Type: application/json' -X POST   http://mydep-controller.metacontroller/sync
+```{{exec}}
+
 
 ```shell
 kubectl create deploy mydep --image=httpd:2.4.41-alpine
