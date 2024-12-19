@@ -30,6 +30,20 @@ kubectl replace -k manifest  $now
 kubetail mydep --since 33m
 ```{{exec}}
 
+- 'GET' request to webhook
+```shell
+curl http://10.96.3.237/sync
+```{{exec}}
+
+
+
+- POST a command to webhook
+```shell
+curl -H 'Content-Type: application/json' \
+       -d '{ "title":"foo","body":"bar", "id": 1}' \
+       -X POST \
+       http://10.96.3.237/sync  
+```{{exec}}
 
 
 ```shell
