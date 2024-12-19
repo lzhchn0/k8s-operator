@@ -21,6 +21,7 @@ PS1='$(pwd)$ '
 
 export now="--grace-period=0 --force"
 export do="-o yaml --dry-run=client"
+export d="describe"
  
 alias finds="find . -name '*.go' -type f -exec grep -inH "
 alias findy="find . -name '*.yaml' -type f -exec grep -inH "
