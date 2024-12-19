@@ -14,6 +14,10 @@ kubectl apply -k manifest
 kubectl apply -f mydep-ctrl-custom.yaml 
 ```{{exec}}
 
+To update configmap and sync.py
+```shell
+kubectl replace -k manifest  $now
+```{{exec}}
 
 
 ```shell
