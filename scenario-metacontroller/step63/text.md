@@ -11,6 +11,7 @@
 ```shell
 kubectl apply -k v1
 kubectl apply -k manifest
+kubectl apply -f mydep-ctrl-custom.yaml 
 ```{{exec}}
 
 
