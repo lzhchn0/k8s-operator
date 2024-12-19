@@ -19,6 +19,12 @@ To update configmap and sync.py
 kubectl replace -k manifest  $now
 ```{{exec}}
 
+- check log from sync.py
+```shell
+kubetail mydep --since 33m
+```{{exec}}
+
+
 
 ```shell
 kubectl create deploy mydep --image=httpd:2.4.41-alpine
