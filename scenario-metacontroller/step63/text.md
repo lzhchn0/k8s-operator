@@ -6,6 +6,12 @@
  mkdir manifest
 ```{{exec}}
 
+- enter folder mydep
+```shell
+cd  /root/metacontroller/examples/mydep
+```{{exec}}
+
+
 
 
 ```shell
