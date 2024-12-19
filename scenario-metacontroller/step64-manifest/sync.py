@@ -6,11 +6,11 @@ import re
 
 
 
-Def new_dep(old):
+def new_dep(old):
   mydep = copy.deepcopy(old)
-  mydep[‘spec’][‘template’]
+  mydep['spec']['template']
 
-  mydep[‘metadata’][‘labels’][‘my-new’] = ‘metacontroller’
+  mydep['metadata']['labels']['my-new'] = 'metacontroller'
 
 
 
