@@ -36,7 +36,7 @@ Informer behind metacontroller
 - The informer periodically flushes the cache and refreshes the objects from the API server. Disabling this mechanism is not feasible.
 - The updated cache will trigger the reconciliation loop for each object in the cache. This mechanism helps the controller prevent any drift between the actual state and the desired state.
 - The configurable resync period
-- Never try to change a object owned by informer, rather deepcopy it. 
+- Never attempt to modify an object owned by an informer; instead, create a deepcopy of it.
 
 
 Webhook
