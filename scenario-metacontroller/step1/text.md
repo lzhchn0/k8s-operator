@@ -57,8 +57,10 @@ yq eval -o=json crdv1.yaml  | jq 'walk(if type == "object" then del(.description
 yq eval tt0.yaml -P  > crdv1-new.yaml
 ```{{exec}}
 
-
+nl usage
 ```shell
+apt install coreutils
+nl -ba -s": " sync.py
 ```{{exec}}
 
 
