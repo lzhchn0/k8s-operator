@@ -46,6 +46,11 @@ The sync webhook is triggered when:
 1. A change occurs in the parent resource (create/update/delete)
 2. A change occurs in any of the child resources
 3. A change occurs in any of the related resources specified in the controller configuration
+
+Sync webhook request
+
+Sync webhook response
+
   
 
 Worker in metacontroller
