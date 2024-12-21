@@ -104,6 +104,9 @@ Sync webhook request sample
             }
         }
     }
+    "finalizing": {
+      # ... 
+    }
 }
 ```
 
