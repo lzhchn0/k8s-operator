@@ -38,6 +38,8 @@ Informer behind metacontroller
 - The configurable resync period
 - Never attempt to modify an object owned by an informer; instead, create a deepcopy of it.
 
+Manage multiple CRDs 
+- As a rule of best practice, a single controller typically manages one CRD, but a metacontroller runtime instance can manage multiple CRDs at the same time.
 
 Webhook
 - It is good practice to ensure that your webhooks are always fully idempotent.
