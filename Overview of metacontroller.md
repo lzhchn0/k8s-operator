@@ -42,6 +42,12 @@ Informer behind metacontroller
 Webhook
 - It is good practice to ensure that your webhooks are always fully idempotent.
 
+The sync webhook is triggered when:
+1. A change occurs in the parent resource (create/update/delete)
+2. A change occurs in any of the child resources
+3. A change occurs in any of the related resources specified in the controller configuration
+  
+
 Worker in metacontroller
 - A worker is a process that handles a given webhook request. Its command line parameter is "--workers", refer to [Here](https://metacontroller.github.io/metacontroller/guide/configuration.html).
 - By default, the queue is processed by 5 workers.
