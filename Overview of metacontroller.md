@@ -47,7 +47,65 @@ The sync webhook is triggered when:
 2. A change occurs in any of the child resources
 3. A change occurs in any of the related resources specified in the controller configuration
 
-Sync webhook request
+Sync webhook request sample
+```json
+{
+    "controller": {
+        "apiVersion": "metacontroller.k8s.io/v1alpha1",
+        "kind": "CompositeController",
+        "metadata": {
+            "name": "my-controller",
+            "uid": "1234abcd-5678-efgh..."
+        }
+    },
+    "parent": {
+        "apiVersion": "example.com/v1",
+        "kind": "MyResource",
+        "metadata": {
+            "name": "example-resource",
+            "namespace": "default",
+            "uid": "5678efgh-1234-abcd...",
+            "generation": 1
+        },
+        "spec": {
+            # ... parent resource spec
+        },
+        "status": {
+            # ... current status if any
+        }
+    },
+    "children": {
+        "Deployment.apps/v1": {
+            "deployment-name": {
+                "apiVersion": "apps/v1",
+                "kind": "Deployment",
+                "metadata": {
+                    "name": "deployment-name",
+                    "namespace": "default"
+                },
+                "spec": {
+                    # ... deployment spec
+                }
+            }
+        }
+    },
+    "related": {
+        "ConfigMap.v1": {
+            "config-name": {
+                "apiVersion": "v1",
+                "kind": "ConfigMap",
+                "metadata": {
+                    "name": "config-name",
+                    "namespace": "default"
+                },
+                "data": {
+                    # ... configmap data
+                }
+            }
+        }
+    }
+}
+```
 
 Sync webhook response
 
