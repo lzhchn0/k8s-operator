@@ -114,8 +114,11 @@ Sync webhook request sample
 
 Sync webhook response
 
+
+
+
 How to debug metacontroller
-- check logs in metacontroller-0 pod
+- check logs in metacontroller-0 pod, search keyword like "error", "can't find resource" 
 - check logs in parent resources
 - check logs in child resources
 - check logs in related resources
