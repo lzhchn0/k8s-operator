@@ -114,7 +114,11 @@ Sync webhook request sample
 
 Sync webhook response
 
-  
+How to debug metacontroller
+- check logs in metacontroller-0 pod
+- check logs in parent resources
+- check logs in child resources
+- check logs in related resources
 
 Worker in metacontroller
 - A worker is a process that handles a given webhook request. Its command line parameter is "--workers", refer to [Here](https://metacontroller.github.io/metacontroller/guide/configuration.html).
