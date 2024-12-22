@@ -32,7 +32,7 @@ kubetail mydep --since 33m
 
 - 'GET' request to webhook
 ```shell
-curl http://10.96.3.237/sync
+kubectl run tmp --restart=Never --rm --image=nginx:alpine -i -- curl   -X GET   http://mydep-controller.metacontroller/sync
 ```{{exec}}
 
 
