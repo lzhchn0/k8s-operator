@@ -21,6 +21,17 @@ kubectl apply -f mydep-ctrl-custom.yaml
 kubectl create deploy mydep --image=nginx 
 ```{{exec}}
 
+view log from metacontroller
+```shell
+k logs metacontroller-0  | jq -r '.stacktrace | gsub("\\n";"\n    ")|("Stack Trace:\n  \(.)")'
+```{{exec}}
+
+
+view stacktrace in log from metacontroller
+```shell
+k logs metacontroller-0  | jq '.'
+```{{exec}}
+
 To update configmap and sync.py
 ```shell
 kubectl replace -k manifest  $now
