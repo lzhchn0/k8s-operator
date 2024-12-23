@@ -23,13 +23,13 @@ kubectl create deploy mydep --image=nginx
 
 view log from metacontroller
 ```shell
-k logs metacontroller-0  | jq -r '.stacktrace | gsub("\\n";"\n    ")|("Stack Trace:\n  \(.)")'
+kubectl logs metacontroller-0  | jq -r '.stacktrace | gsub("\\n";"\n    ")|("Stack Trace:\n  \(.)")'
 ```{{exec}}
 
 
 view stacktrace in log from metacontroller
 ```shell
-k logs metacontroller-0  | jq '.'
+kubectl logs metacontroller-0  | jq '.'
 ```{{exec}}
 
 To update configmap and sync.py
