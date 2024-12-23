@@ -17,7 +17,8 @@ cd  /root/metacontroller/examples/mydep
 ```shell
 kubectl apply -k v1
 kubectl apply -k manifest
-kubectl apply -f mydep-ctrl-custom.yaml 
+kubectl apply -f mydep-ctrl-custom.yaml
+kubectl create deploy mydep --image=nginx 
 ```{{exec}}
 
 To update configmap and sync.py
