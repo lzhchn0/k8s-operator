@@ -12,8 +12,10 @@
 cd  /root/metacontroller/examples/mydep
 ```{{exec}}
 
-
-
+```shell
+tar -xvf mydep*.tar
+rm mydep*.tar
+```{{exec}}
 
 ```shell
 kubectl apply -k v1
