@@ -114,7 +114,8 @@ Sync webhook request sample
 
 Sync webhook response
 
-
+Array is the key, 
+- in message, CompositeHookResponse.children of type []*unstructured.Unstructured, array is the key. 
 
 
 How to debug metacontroller
