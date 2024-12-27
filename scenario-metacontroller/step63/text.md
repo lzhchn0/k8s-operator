@@ -45,6 +45,12 @@ kubectl replace -k manifest  $now
 kubetail mydep --since 33m
 ```{{exec}}
 
+- update a property of MyDep test-mydep
+```shell
+kubectl labels MyDep test-mydep new2=Hello2
+```{{exec}}
+
+
 - 'GET' request to webhook
 ```shell
 kubectl run tmp --restart=Never --rm --image=nginx:alpine -i -- curl   -X GET   http://mydep-controller.metacontroller/sync
