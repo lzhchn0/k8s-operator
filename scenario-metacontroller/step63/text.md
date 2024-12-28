@@ -78,7 +78,8 @@ kubectl create deploy mydep --image=httpd:2.4.41-alpine
 
 swap ' and ", make sure ~ is not in the given file
 ```shell
-sed -e -i "s/'/~/g"     tt-extra-a1 
-sed -e -i "s/\"/'/g"    tt-extra-a1 
-sed -e -i "s/~/\"/g"    tt-extra-a1
+myfile=tt-extra-a1
+sed -e -i "s/'/~/g"     $myfile 
+sed -e -i "s/\"/'/g"    $myfile
+sed -e -i "s/~/\"/g"    $myfile
 ```{{exec}}
