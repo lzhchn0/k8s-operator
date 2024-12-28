@@ -76,8 +76,7 @@ kubectl run tmp --restart=Never --rm --image=nginx:alpine -i -- curl -d '{ "titl
 kubectl create deploy mydep --image=httpd:2.4.41-alpine
 ```{{exec}}
 
-swap ' and "
-
+swap ' and ", make sure ~ is not in the given file
 ```shell
 sed -e -i "s/'/~/g"     tt-extra-a1 
 sed -e -i "s/\"/'/g"    tt-extra-a1 
