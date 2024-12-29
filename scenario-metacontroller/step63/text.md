@@ -83,3 +83,8 @@ sed -e -i "s/'/~/g"     $myfile
 sed -e -i "s/\"/'/g"    $myfile
 sed -e -i "s/~/\"/g"    $myfile
 ```{{exec}}
+
+get extracted_json.log
+```shell
+kubectl logs mydep-controller-678f8cc6c5-nfzb2  > extracted_json.log
+```{{exec}}
