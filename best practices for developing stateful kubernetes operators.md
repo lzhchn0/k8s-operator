@@ -11,7 +11,8 @@
  -  Handle Network Identity: Handle network identity changes, such as when a pod is recreated or its IP address changes.
 
 3. Reconciliation Logic
-
+   - Ensure your Operator’s reconciliation logic is **idempotent**. Repeated reconciliations should not cause unintended side effects.
+   - Handle edge cases, such as partial failures or resource deletions, gracefully.
 4. Scale Operations
 
 5. Backup and Recovery
