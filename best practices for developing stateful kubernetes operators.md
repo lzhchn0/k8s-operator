@@ -61,7 +61,7 @@
 ---
 
 10. Documentation
-   - Document the purpose, usage, and configuration of your Operator.
-   - Provide examples and tutorials for common use cases.
+    - Document the purpose, usage, and configuration of your Operator.
+    - Provide examples and tutorials for common use cases.
 
     
