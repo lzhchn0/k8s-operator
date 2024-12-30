@@ -31,5 +31,7 @@
    - Perform end-to-end (E2E) testing in a Kubernetes cluster to validate the Operator’s behavior.
    - Test edge cases, such as resource deletions, cluster failures, and network partitions.
 10. Upgrade Management
+   - Implement versioning for your CRDs and Operator to manage backward compatibility.
+   - Provide upgrade paths for users to migrate from older versions of your Operator.
 
     
