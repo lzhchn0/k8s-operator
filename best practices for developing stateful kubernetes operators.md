@@ -3,12 +3,12 @@
 
 2. State Management
 
- -  Use StatefulSets: Use StatefulSets to manage stateful applications, which provide features like:
-    -   Ordered deployment: Ensures that pods are deployed in a specific order.
-    -   Stable network identities: Provides stable network identities for pods.
- -  Implement Leader Election: Implement leader election mechanisms to ensure that only one instance of your application or resource is active at a time.
- -  Use Persistent Volumes: Use Persistent Volumes (PVs) to store data that needs to be preserved across pod restarts or deletions.
- -  Handle Network Identity: Handle network identity changes, such as when a pod is recreated or its IP address changes.
+   -  Use StatefulSets: Use StatefulSets to manage stateful applications, which provide features like:
+      -   Ordered deployment: Ensures that pods are deployed in a specific order.
+      -   Stable network identities: Provides stable network identities for pods.
+   -  Implement Leader Election: Implement leader election mechanisms to ensure that only one instance of your application or resource is active at a time.
+   -  Use Persistent Volumes: Use Persistent Volumes (PVs) to store data that needs to be preserved across pod restarts or deletions.
+   -  Handle Network Identity: Handle network identity changes, such as when a pod is recreated or its IP address changes.
 
 3. Reconciliation Logic
    - Ensure your Operator’s reconciliation logic is **idempotent**. Repeated reconciliations should not cause unintended side effects.
