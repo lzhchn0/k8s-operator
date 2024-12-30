@@ -45,6 +45,18 @@ sudo mv kubetail /usr/local/bin/
 ```{{exec}}
 
 
+Install metacontroller.
+- clusterrole
+- user is 'admin'
+- pwd is 'admin' 
+Apply all set of production resources defined in kustomization.yaml in `production` directory 
+
+```shell
+kubectl create clusterrolebinding my-cluster-admin-binding --clusterrole=cluster-admin --user=admin@admin
+kubectl apply -k https://github.com/metacontroller/metacontroller/manifests/production
+```{{exec}}
+
+
 ```shell
 ```{{exec}}
 
