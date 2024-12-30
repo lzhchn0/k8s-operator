@@ -20,6 +20,10 @@ kubectl apply -k manifest
 kubectl apply -f mydep-ctrl-custom.yaml 
 ```{{exec}}
 
+Label test-mydep
+```shell
+kubectl label mydep test-mydep    new4=Hello4
+```{{exec}}
 
 view stacktrace in log from metacontroller
 ```shell
