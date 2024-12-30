@@ -23,9 +23,13 @@
    - Use structured logging to make debugging and troubleshooting easier.
 
 8. Security Considerations
-
+   - Follow the principle of least privilege when defining RBAC roles for your Operator.
+   - Use **Pod Security Policies** or **Pod Security Admission** to secure your Operator’s Pods.
+   - Avoid hardcoding sensitive information; use **Secrets** instead.
 9. Testing Strategy
-
+   - Write unit tests for your Operator’s logic using frameworks like **envtest**.
+   - Perform end-to-end (E2E) testing in a Kubernetes cluster to validate the Operator’s behavior.
+   - Test edge cases, such as resource deletions, cluster failures, and network partitions.
 10. Upgrade Management
 
     
