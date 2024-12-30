@@ -17,11 +17,13 @@
 5. Backup and Recovery
 
 6. Monitoring and Metrics
+   - Integrate with Kubernetes-native monitoring tools like Prometheus and Grafana.
+   - Use structured logging to make debugging and troubleshooting easier.
 
-7. Security Considerations
+8. Security Considerations
 
-8. Testing Strategy
+9. Testing Strategy
 
-9. Upgrade Management
+10. Upgrade Management
 
     
