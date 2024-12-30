@@ -17,8 +17,7 @@ rm mydep*.tar
 ```shell
 kubectl apply -k v1
 kubectl apply -k manifest
-kubectl apply -f mydep-ctrl-custom.yaml
-kubectl create deploy mydep --image=nginx 
+kubectl apply -f mydep-ctrl-custom.yaml 
 ```{{exec}}
 
 
@@ -39,7 +38,20 @@ kubectl replace -k manifest  $now
 ```{{exec}}
 
 
+- 'GET' request to webhook
+```shell
+kubectl run tmp --restart=Never --rm --image=nginx:alpine -i -- curl   -X GET   http://mydep-controller.metacontroller/sync
+```{{exec}}
+
+
  
 ```shell
-kubectl run my-tmp1 --image=busybox -it -- nslookup google.com
+kubectl run my-tmp1 --image=busybox --rm -i  -- nslookup google.com
+```{{exec}}
+
+
+
+get extracted_json.log
+```shell
+kubectl logs mydep-controller-678f8cc6c5-nfzb2  > extracted_json.log
 ```{{exec}}
