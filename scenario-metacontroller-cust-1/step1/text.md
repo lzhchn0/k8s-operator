@@ -58,6 +58,14 @@ kubectl apply -k https://github.com/metacontroller/metacontroller/manifests/prod
 
 
 ```shell
+git clone https://github.com/metacontroller/metacontroller.git 
+cd /root/metacontroller/examples/bluegreen
+kn  metacontroller
+
+```{{exec}}
+
+
+```shell
 ```{{exec}}
 
 
