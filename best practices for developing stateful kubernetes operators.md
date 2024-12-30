@@ -15,7 +15,7 @@
 4. Scale Operations
 
 5. Backup and Recovery
-
+   - Implement mechanisms for backing up and restoring state (e.g., using Velero or custom scripts).
 6. Monitoring and Metrics
    - Integrate with Kubernetes-native monitoring tools like Prometheus and Grafana.
    - Use structured logging to make debugging and troubleshooting easier.
