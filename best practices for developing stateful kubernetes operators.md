@@ -33,5 +33,8 @@
 10. Upgrade Management
    - Implement versioning for your CRDs and Operator to manage backward compatibility.
    - Provide upgrade paths for users to migrate from older versions of your Operator.
+11. Documentation
+   - Document the purpose, usage, and configuration of your Operator.
+   - Provide examples and tutorials for common use cases.
 
     
