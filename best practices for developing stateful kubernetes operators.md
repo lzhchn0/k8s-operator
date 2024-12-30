@@ -40,27 +40,27 @@
 ---
      
 
-8. Security Considerations
+7. Security Considerations
    - Follow the principle of least privilege when defining RBAC roles for your Operator.
    - Use **Pod Security Policies** or **Pod Security Admission** to secure your Operator’s Pods.
    - Avoid hardcoding sensitive information; use **Secrets** instead.
 
 ---
      
-9. Testing Strategy
+8. Testing Strategy
    - Write unit tests for your Operator’s logic using frameworks like **envtest**.
    - Perform end-to-end (E2E) testing in a Kubernetes cluster to validate the Operator’s behavior.
    - Test edge cases, such as resource deletions, cluster failures, and network partitions.
      
 ---
 
-10. Upgrade Management
+9. Upgrade Management
    - Implement versioning for your CRDs and Operator to manage backward compatibility.
    - Provide upgrade paths for users to migrate from older versions of your Operator.
 
 ---
 
-11. Documentation
+10. Documentation
    - Document the purpose, usage, and configuration of your Operator.
    - Provide examples and tutorials for common use cases.
 
