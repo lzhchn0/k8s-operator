@@ -1,6 +1,7 @@
 
 1. Custom Resource Design
-
+   - Define CRDs to represent the custom resources your Operator manages.
+   - Use clear and descriptive schemas for your CRDs, including validation rules using OpenAPI v3 schemas.
 2. State Management
 
    -  Use StatefulSets: Use StatefulSets to manage stateful applications, which provide features like:
