@@ -63,8 +63,10 @@ apt install coreutils
 nl -ba -s": " sync.py
 ```{{exec}}
 
-
+yq retrieve first-level elements and 2nd level 
 ```shell
+yq eval '. | keys' crdv1.yaml
+yq eval '.metadata | keys' crdv1.yaml
 ```{{exec}}
 
 
