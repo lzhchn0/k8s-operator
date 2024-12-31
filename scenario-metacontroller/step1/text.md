@@ -81,3 +81,12 @@ yq eval '.[]' crdv1.yaml
 ```{{exec}}
 
 
+```shell
+yq '.[] | select(has_keys([]))' yourfile.yaml
+
+
+
+
+```{{exec}}
+
+
