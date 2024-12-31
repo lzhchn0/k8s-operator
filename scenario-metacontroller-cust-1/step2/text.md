@@ -36,6 +36,12 @@ kubectl logs metacontroller-0  | jq '.'
 kubetail mydep --since 33m
 ```{{exec}}
 
+- update a property of MyDep test-mydep
+```shell
+kubectl labels MyDep test-mydep new2=Hello2
+```{{exec}}
+
+
 To update configmap and sync.py
 ```shell
 kubectl replace -k manifest  $now
