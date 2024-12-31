@@ -70,9 +70,14 @@ yq eval '.metadata | keys' crdv1.yaml
 ```{{exec}}
 
 
+
 ```shell
+yq eval '.' crdv1.yaml
+yq eval '.<first_level_key>' yourfile.yaml
 ```{{exec}}
 
 ```shell
+yq eval '.[]' crdv1.yaml 
 ```{{exec}}
+
 
