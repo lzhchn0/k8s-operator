@@ -120,6 +120,8 @@ Through mysterious webhook to develop controller
 Array is the key
 - in message, CompositeHookResponse.children of type []*unstructured.Unstructured, array is the key. 
 
+In case of an update of child, metacontroller-0 echos an error message
+- "msg": "Failed to create child, child object already exists",
 
 How to debug metacontroller
 - check logs in metacontroller-0 pod, search keyword like "error", "can't find resource" 
