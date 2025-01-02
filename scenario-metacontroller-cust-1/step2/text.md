@@ -39,7 +39,7 @@ kubetail mydep --since 33m
 
 - Watch status of my operators'
 ```shell
-watch "kubectl get pods,svc,deploy"
+watch "kubectl get pods,svc,deploy,cm"
 ```{{exec}}
 
 - update a property of MyDep test-mydep
