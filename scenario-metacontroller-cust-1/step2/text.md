@@ -36,6 +36,12 @@ kubectl logs metacontroller-0  | jq '.'
 kubetail mydep --since 33m
 ```{{exec}}
 
+
+- Watch status of my operators'
+```shell
+watch "kubectl get pods,svc,deploy"
+```{{exec}}
+
 - update a property of MyDep test-mydep
 ```shell
 kubectl labels MyDep test-mydep new2=Hello2
