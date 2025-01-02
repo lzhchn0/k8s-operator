@@ -133,3 +133,6 @@ How to debug metacontroller
 Worker in metacontroller
 - A worker is a process that handles a given webhook request. Its command line parameter is "--workers", refer to [Here](https://metacontroller.github.io/metacontroller/guide/configuration.html).
 - By default, the queue is processed by 5 workers.
+
+Additional Readings
+- [hypergig](https://github.com/GoogleCloudPlatform/metacontroller/issues/190)
