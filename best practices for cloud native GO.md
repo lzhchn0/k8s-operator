@@ -101,3 +101,84 @@ By supporting multiple versions, Kubernetes allows users to:
 
 
 **Strictly follow the guidelines for both Global Tag and Local Tag**
+
+The dynamic client uses 
+- map[string]interface{}.
+- []interface{}.
+- string, bool, float64, or int64.
+
+Example of the **Dynamic Client**
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "log"
+
+    metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+    "k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
+    "k8s.io/apimachinery/pkg/runtime/schema"
+    "k8s.io/client-go/dynamic"
+    "k8s.io/client-go/tools/clientcmd"
+)
+
+func main() {
+    // Load kubeconfig
+    config, err := clientcmd.BuildConfigFromFlags("", clientcmd.RecommendedHomeFile)
+    if err != nil {
+        log.Fatalf("Error building kubeconfig: %v", err)
+    }
+
+    // Create dynamic client
+    dynamicClient, err := dynamic.NewForConfig(config)
+    if err != nil {
+        log.Fatalf("Error creating dynamic client: %v", err)
+    }
+
+    // Define the GroupVersionResource (GVR) for the custom resource
+    gvr := schema.GroupVersionResource{
+        Group:    "example.com",
+        Version:  "v1",
+        Resource: "myresources",
+    }
+
+    // Create an unstructured object for the custom resource
+    obj := &unstructured.Unstructured{
+        Object: map[string]interface{}{
+            "apiVersion": "example.com/v1",
+            "kind":       "MyResource",
+            "metadata": map[string]interface{}{
+                "name":      "my-resource",
+                "namespace": "default",
+            },
+            "spec": map[string]interface{}{
+                "replicas": 3,
+                "image":    "nginx:1.14.2",
+            },
+        },
+    }
+
+    // Create the custom resource
+    createdObj, err := dynamicClient.Resource(gvr).Namespace("default").Create(context.TODO(), obj, metav1.CreateOptions{})
+    if err != nil {
+        log.Fatalf("Error creating custom resource: %v", err)
+    }
+
+    // Access the created resource's data
+    fmt.Printf("Created resource: %v\n", createdObj.UnstructuredContent())
+
+    // Retrieve the custom resource
+    retrievedObj, err := dynamicClient.Resource(gvr).Namespace("default").Get(context.TODO(), "my-resource", metav1.GetOptions{})
+    if err != nil {
+        log.Fatalf("Error retrieving custom resource: %v", err)
+    }
+
+    // Access the retrieved resource's data
+    replicas, found, err := unstructured.NestedInt64(retrievedObj.Object, "spec", "replicas")
+    if err != nil || !found {
+        log.Fatalf("Error accessing replicas field: %v", err)
+    }
+    fmt.Printf("Retrieved resource replicas: %d\n", replicas)
+}
+```
