@@ -64,10 +64,10 @@ The convention for package structure is `pkg/apis/<group>/<version>`.
 
 
 Advanced Features of Custom Resources
-- Validation           | Enforce constraints on custom resource fields using OpenAPI v3 schema.      
-- Defaulting           | Set default values for fields if not provided by the user.                  
-- Subresources         | Enable `/status` and `/scale` subresources for advanced use cases.          
-- Webhooks             | Implement custom logic for validation, mutation, and conversion.            
-- Versioning           | Support multiple versions of a custom resource with conversion between them.
-- Finalizers           | Implement custom cleanup logic during resource deletion.                    
-- Controllers/Operators| Manage custom resources and reconcile desired state with actual state.  
+- Validation           - Enforce constraints on custom resource fields using OpenAPI v3 schema.      
+- Defaulting           - Set default values for fields if not provided by the user.                  
+- Subresources         - Enable `/status` and `/scale` subresources for advanced use cases.          
+- Webhooks             - Implement custom logic for validation, mutation, and conversion.            
+- Versioning           - Support multiple versions of a custom resource with conversion between them.
+- Finalizers           - Implement custom cleanup logic during resource deletion.                    
+- Controllers/Operators- Manage custom resources and reconcile desired state with actual state.  
