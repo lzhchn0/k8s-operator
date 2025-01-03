@@ -221,3 +221,55 @@ API Machinery is the foundation of the Kubernetes API, enabling it to handle res
 - Versioning and Conversion:	Tools for handling multiple API versions and converting between them.
 - Dynamic Data:	Support for unstructured data (e.g., custom resources).
 - Utilities:	Labels, selectors, field selectors, pagination, and watch utilities.
+
+Sample of API Machinery
+```go
+package main
+
+import (
+    "fmt"
+
+    metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+    "k8s.io/apimachinery/pkg/runtime"
+    "k8s.io/apimachinery/pkg/runtime/serializer/json"
+    "k8s.io/client-go/kubernetes/scheme"
+    corev1 "k8s.io/api/core/v1"
+)
+
+func main() {
+    // Create a Pod object
+    pod := &corev1.Pod{
+        TypeMeta: metav1.TypeMeta{
+            APIVersion: "v1",
+            Kind:       "Pod",
+        },
+        ObjectMeta: metav1.ObjectMeta{
+            Name:      "my-pod",
+            Namespace: "default",
+        },
+        Spec: corev1.PodSpec{
+            Containers: []corev1.Container{
+                {
+                    Name:  "nginx",
+                    Image: "nginx:1.14.2",
+                },
+            },
+        },
+    }
+
+    // Serialize the Pod to JSON
+    serializer := json.NewSerializer(json.DefaultMetaFactory, scheme.Scheme, scheme.Scheme, false)
+    encoded, err := runtime.Encode(serializer, pod)
+    if err != nil {
+        panic(err)
+    }
+    fmt.Printf("Serialized Pod:\n%s\n", string(encoded))
+
+    // Deserialize the JSON back into a Pod object
+    decoded, err := runtime.Decode(scheme.Codecs.UniversalDeserializer(), encoded)
+    if err != nil {
+        panic(err)
+    }
+    fmt.Printf("Deserialized Pod: %+v\n", decoded)
+}
+```
