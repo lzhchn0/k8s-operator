@@ -182,3 +182,34 @@ func main() {
     fmt.Printf("Retrieved resource replicas: %d\n", replicas)
 }
 ```
+
+Sample of json.Unmarshal
+
+```go
+package main
+
+import (
+	"encoding/json"
+	"fmt"
+	"log"
+)
+
+type Person struct {
+	Name string `json:"name"`
+	Age  int    `json:"age"`
+}
+
+func main() {
+	
+	data := []byte(`{"name": "John", "age": 30}`)
+
+	// Unmarshal to Person 
+	var person Person
+	err := json.Unmarshal(data, &person)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	fmt.Println(person)
+}
+```
