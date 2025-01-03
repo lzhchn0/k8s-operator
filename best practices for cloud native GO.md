@@ -98,3 +98,6 @@ By supporting multiple versions, Kubernetes allows users to:
 
 **Gradual Migration**
 - Users can migrate their workloads from alpha/beta versions to stable versions at their own pace. Kubernetes provides tools like **API deprecation policies** and **conversion webhooks** to assist with this migration.
+
+
+**Strictly follow the guidelines for both Global Tag and Local Tag**
