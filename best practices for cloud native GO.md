@@ -55,3 +55,4 @@ func main() {
     }
 }
 ```
+- A **typed client** in `client-go` is a client that works with **strongly-typed objects**. This means that the client is aware of the specific Kubernetes resource types (e.g., `Pod`, `Deployment`, `Service`) and their associated Go structs. When you use a typed client, you interact with Kubernetes resources using these predefined structs, which ensures type safety and makes your code easier to understand and maintain.
