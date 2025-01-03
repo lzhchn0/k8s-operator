@@ -70,4 +70,10 @@ Advanced Features of Custom Resources
 - Webhooks             - Implement custom logic for validation, mutation, and conversion.            
 - Versioning           - Support multiple versions of a custom resource with conversion between them.
 - Finalizers           - Implement custom cleanup logic during resource deletion.                    
-- Controllers/Operators- Manage custom resources and reconcile desired state with actual state.  
+- Controllers/Operators- Manage custom resources and reconcile desired state with actual state.
+
+Internal Types and External Types 
+- Multiple API Versions(External):	Support API evolution, backward compatibility, and gradual migration.
+- Internal Types:	Provide a unified, efficient representation of resources for internal use.
+- Conversion Mechanism:	Translate resources between external versions and internal types.
+
