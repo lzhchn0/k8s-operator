@@ -2,27 +2,27 @@
 
 ```shell
  cd ..
- mkdir mydep
- cd mydep
+ mkdir hawk
+ cd hawk
  mkdir v1
  mkdir manifest
- cd  /root/metacontroller/examples/mydep
+ cd  /root/metacontroller/examples/hawk
 ```{{exec}}
 
 ```shell
-tar -xvf mydep*.tar
-rm mydep*.tar
+tar -xvf hawk*.tar
+rm hawk*.tar
 ```{{exec}}
 
 ```shell
 kubectl apply -k v1
 kubectl apply -k manifest
-kubectl apply -f mydep-ctrl-custom.yaml 
+kubectl apply -f hawk-ctrl-custom.yaml 
 ```{{exec}}
 
-Label test-mydep
+Label test-hawk
 ```shell
-kubectl label mydep test-mydep    new4=Hello4
+kubectl label hawk test-hawk    new4=Hello4
 ```{{exec}}
 
 view stacktrace in log from metacontroller
@@ -33,7 +33,7 @@ kubectl logs metacontroller-0  | jq '.'
 
 - check log from sync.py
 ```shell
-kubetail mydep --since 33m
+kubetail hawk --since 33m
 ```{{exec}}
 
 
@@ -42,9 +42,9 @@ kubetail mydep --since 33m
 watch "kubectl get pods,svc,deploy,cm"
 ```{{exec}}
 
-- update a property of MyDep test-mydep
+- update a property of MyDep test-hawk
 ```shell
-kubectl labels MyDep test-mydep new2=Hello2
+kubectl labels MyDep test-hawk new2=Hello2
 ```{{exec}}
 
 
@@ -56,7 +56,7 @@ kubectl replace -k manifest  $now
 
 - 'GET' request to webhook
 ```shell
-kubectl run tmp --restart=Never --rm --image=nginx:alpine -i -- curl   -X GET   http://mydep-controller.metacontroller/sync
+kubectl run tmp --restart=Never --rm --image=nginx:alpine -i -- curl   -X GET   http://hawk-controller.metacontroller/sync
 ```{{exec}}
 
 
@@ -69,5 +69,5 @@ kubectl run my-tmp1 --image=busybox --rm -i  -- nslookup google.com
 
 get extracted_json.log
 ```shell
-kubectl logs mydep-controller-678f8cc6c5-nfzb2  > extracted_json.log
+kubectl logs hawk-controller-678f8cc6c5-nfzb2  > extracted_json.log
 ```{{exec}}
