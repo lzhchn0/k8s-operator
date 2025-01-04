@@ -1,3 +1,10 @@
+## Clients
+- **RESTClient**: A low-level client for making raw HTTP requests to the Kubernetes API.
+- **Clientset**: A high-level, type-safe client for interacting with core Kubernetes resources (e.g., Pods, Deployments).
+- **Dynamic Client**: A client for interacting with unstructured data (e.g., custom resources).
+- **Discovery Client**: A client for discovering API resources and versions supported by the Kubernetes API server.
+
+
 ## Informers and Caching	
 Introduced **informers** and **shared informer factories** for efficient resource watching.
 
