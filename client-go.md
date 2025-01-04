@@ -77,7 +77,7 @@ Tools like kubectl, Helm, and **cluster management tools** rely on client-go.
 - **REST Mapping**   The process of mapping a GVK to a GVR and determining the resource's scope.
 - **RESTMapper**     A tool in `client-go` that performs REST mapping.
 
-## **Kind vs. Resources** (Pluralization Rules)
+## **Kind vs. Resource** (Pluralization Rules)
 
 The pluralization of Kinds to Resources follows standard English rules, but there are some exceptions. Here are a few examples:
 
