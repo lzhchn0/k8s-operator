@@ -32,6 +32,9 @@ for _, pod := range pods.Items {
     fmt.Println(pod.Name)
 }
 ```
+## Workqueues: 
+For handling events and reconciling desired states.
+
 ## Tools and Plugins:
 Tools like kubectl, Helm, and **cluster management tools** rely on client-go.
 
