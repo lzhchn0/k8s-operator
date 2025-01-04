@@ -90,8 +90,12 @@ The pluralization of Kinds to Resources follows standard English rules, but ther
 | `ConfigMap`    | `configmaps`   |
 | `Ingress`      | `ingresses`    |
 
-- Resource used in REST API endpoints.
 - Kind used in YAML/JSON manifests and Go code.
+- Resource used in REST API endpoints.
+- Kind is used in YAML/JSON manifests and Go code, where readability and clarity are important. PascalCase is more readable and aligns with programming conventions.
+- Resource is used in REST API endpoints, where lowercase and pluralization are standard conventions for URLs.
+
+
 
 ## Sample of using RESTMapper
 ```go
