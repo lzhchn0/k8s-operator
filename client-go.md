@@ -195,3 +195,17 @@ type ObjectMeta struct {
 | **Used For**           | Identifying and processing the object type.       | Managing the object’s lifecycle and identity.       |
 | **Example**            | `apiVersion: apps/v1`, `kind: Deployment`.        | `name: my-deployment`, `namespace: default`.        |
   
+
+
+
+## **`client-go`-based applications remain compatible with a Kubernetes cluster**
+
+| **Aspect**               | **Details**                                                                 |
+|---------------------------|-----------------------------------------------------------------------------|
+| **Version Alignment**     | `client-go` versions align with Kubernetes versions (e.g., `v0.22.x` for `v1.22.x`). |
+| **Backward Compatibility**| `client-go` can work with older Kubernetes versions within the same major version. |
+| **Forward Compatibility** | `client-go` is not forward-compatible with newer Kubernetes versions.       |
+| **Skew Policy**           | `client-go` can be up to two minor versions older than the Kubernetes API server. |
+| **Best Practices**        | Pin `client-go` version, test with target Kubernetes version, stay updated. |
+
+
