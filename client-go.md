@@ -73,6 +73,6 @@ Tools like kubectl, Helm, and **cluster management tools** rely on client-go.
 
 ## REST Mapping
 - **GVK**            Group-Version-Kind: Identifies the type of resource (e.g., `apps/v1.Deployment`).
-- **GVR**            Group-Version-Resource: Identifies the REST endpoint for the resource.
+- **GVR**            Group-Version-Resource: Identifies the REST endpoint for the resource (e.g., `GVR: apps/v1/deployments; Scope: Namespaced`).
 - **REST Mapping**   The process of mapping a GVK to a GVR and determining the resource's scope.
 - **RESTMapper**     A tool in `client-go` that performs REST mapping.
