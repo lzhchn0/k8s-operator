@@ -6,7 +6,10 @@
 
 
 ## Informers and Caching	
-Introduced **informers** and **shared informer factories** for efficient resource watching.
+- Introduced **informers** and **shared informer factories** for efficient resource watching.
+- **Informers**: Watch and cache Kubernetes resources, reducing API server load.
+- **SharedInformerFactory**: Allows multiple controllers to share the same cache.
+- **Lister**: Provides read-only access to cached resources.
 
 ## Dynamic Client	
 Added support for unstructured data and custom resources.
