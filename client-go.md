@@ -215,7 +215,7 @@ Kubernetes and `client-go` follow **semantic versioning** (e.g., `v1.20.0`), whi
 
 For `client-go`, the versioning aligns with Kubernetes releases but may not always match exactly.
 
-**Code Example**
+**Code Example** of how to use `client-go v0.22.x` with Kubernetes `v1.22.x`
 ```go
 package main
 
