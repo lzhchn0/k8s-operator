@@ -48,9 +48,11 @@ for _, pod := range pods.Items {
 - "k8s.io/client-go/util/workqueue"
 - clientgo_cache "k8s.io/client-go/tools/cache"
 - clientgotesting "k8s.io/client-go/testing"
+- clientsetscheme "k8s.io/client-go/kubernetes/scheme"
 - discovery "k8s.io/client-go/discovery"
 - fakeclientset "k8s.io/client-go/kubernetes/fake"
 - fakediscovery "k8s.io/client-go/discovery/fake"
 - flowcontrol "k8s.io/client-go/util/flowcontrol"
 - rest "k8s.io/client-go/rest"
 - typedcorev1 "k8s.io/client-go/kubernetes/typed/core/v1"
+
