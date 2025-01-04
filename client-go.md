@@ -208,4 +208,9 @@ type ObjectMeta struct {
 | **Skew Policy**           | `client-go` can be up to two minor versions older than the Kubernetes API server. |
 | **Best Practices**        | Pin `client-go` version, test with target Kubernetes version, stay updated. |
 
+Kubernetes and `client-go` follow **semantic versioning** (e.g., `v1.20.0`), which consists of:
+- **Major version (v1)**: Indicates breaking changes.
+- **Minor version (20)**: Indicates backward-compatible feature additions.
+- **Patch version (0)**: Indicates backward-compatible bug fixes.
 
+For `client-go`, the versioning aligns with Kubernetes releases but may not always match exactly.
