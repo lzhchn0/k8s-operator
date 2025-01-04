@@ -146,3 +146,52 @@ func main() {
     fmt.Printf("Scope: %s\n", mapping.Scope.Name())
 }
 ```
+
+## **TypeMeta**
+### **Fields**
+- **`APIVersion`**: The API version of the object (e.g., `apps/v1`, `batch/v1`).
+- **`Kind`**: The type of the object (e.g., `Pod`, `Deployment`, `Service`).
+
+### **Example**
+```go
+type TypeMeta struct {
+    APIVersion string `json:"apiVersion,omitempty"`
+    Kind       string `json:"kind,omitempty"`
+}
+```
+
+## **ObjectMeta** 
+
+
+### **Fields**
+- **`Name`**: The name of the object.
+- **`Namespace`**: The namespace to which the object belongs (if namespaced).
+- **`Labels`**: Key-value pairs used for identifying and organizing objects.
+- **`Annotations`**: Key-value pairs used for storing non-identifying metadata.
+- **`OwnerReferences`**: References to the object’s owners (e.g., a Deployment owning a ReplicaSet).
+- **`ResourceVersion`**: A version identifier used for optimistic concurrency control.
+- **`UID`**: A unique identifier for the object.
+
+### **Example**
+```go
+type ObjectMeta struct {
+    Name            string            `json:"name,omitempty"`
+    Namespace       string            `json:"namespace,omitempty"`
+    Labels          map[string]string `json:"labels,omitempty"`
+    Annotations     map[string]string `json:"annotations,omitempty"`
+    OwnerReferences []OwnerReference  `json:"ownerReferences,omitempty"`
+    ResourceVersion string            `json:"resourceVersion,omitempty"`
+    UID             types.UID         `json:"uid,omitempty"`
+}
+```
+
+### **Key Differences**
+
+| **Aspect**            | **TypeMeta**                                      | **ObjectMeta**                                      |
+|------------------------|---------------------------------------------------|-----------------------------------------------------|
+| **Purpose**            | Describes the **type** of the object.             | Describes the **instance** of the object.           |
+| **Fields**             | `APIVersion`, `Kind`.                             | `Name`, `Namespace`, `Labels`, `Annotations`, etc.  |
+| **Embedded In**        | Top-level structure of Kubernetes objects.        | `metadata` field of Kubernetes objects.             |
+| **Used For**           | Identifying and processing the object type.       | Managing the object’s lifecycle and identity.       |
+| **Example**            | `apiVersion: apps/v1`, `kind: Deployment`.        | `name: my-deployment`, `namespace: default`.        |
+  
