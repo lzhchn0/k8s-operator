@@ -76,3 +76,53 @@ Tools like kubectl, Helm, and **cluster management tools** rely on client-go.
 - **GVR**            Group-Version-Resource: Identifies the REST endpoint for the resource (e.g., `GVR: apps/v1/deployments; Scope: Namespaced`).
 - **REST Mapping**   The process of mapping a GVK to a GVR and determining the resource's scope.
 - **RESTMapper**     A tool in `client-go` that performs REST mapping.
+
+## Sample of using RESTMapper
+```go
+package main
+
+import (
+    "fmt"
+    "log"
+
+    "k8s.io/apimachinery/pkg/api/meta"
+    "k8s.io/client-go/discovery"
+    "k8s.io/client-go/discovery/cached/memory"
+    "k8s.io/client-go/rest"
+    "k8s.io/client-go/tools/clientcmd"
+)
+
+func main() {
+    // Load kubeconfig
+    config, err := clientcmd.BuildConfigFromFlags("", clientcmd.RecommendedHomeFile)
+    if err != nil {
+        log.Fatalf("Error building kubeconfig: %v", err)
+    }
+
+    // Create a discovery client
+    discoveryClient, err := discovery.NewDiscoveryClientForConfig(config)
+    if err != nil {
+        log.Fatalf("Error creating discovery client: %v", err)
+    }
+
+    // Create a RESTMapper
+    restMapper := memory.NewDeferredDiscoveryRESTMapper(memory.NewMemCacheClient(discoveryClient))
+
+    // Define a GVK
+    gvk := schema.GroupVersionKind{
+        Group:   "apps",
+        Version: "v1",
+        Kind:    "Deployment",
+    }
+
+    // Perform REST mapping
+    mapping, err := restMapper.RESTMapping(gvk.GroupKind(), gvk.Version)
+    if err != nil {
+        log.Fatalf("Error performing REST mapping: %v", err)
+    }
+
+    // Print the GVR and scope
+    fmt.Printf("GVR: %s/%s/%s\n", mapping.Resource.Group, mapping.Resource.Version, mapping.Resource.Resource)
+    fmt.Printf("Scope: %s\n", mapping.Scope.Name())
+}
+```
