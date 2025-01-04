@@ -52,3 +52,5 @@ for _, pod := range pods.Items {
 - fakeclientset "k8s.io/client-go/kubernetes/fake"
 - fakediscovery "k8s.io/client-go/discovery/fake"
 - flowcontrol "k8s.io/client-go/util/flowcontrol"
+- rest "k8s.io/client-go/rest"
+- typedcorev1 "k8s.io/client-go/kubernetes/typed/core/v1"
