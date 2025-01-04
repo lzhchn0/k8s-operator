@@ -90,6 +90,9 @@ The pluralization of Kinds to Resources follows standard English rules, but ther
 | `ConfigMap`    | `configmaps`   |
 | `Ingress`      | `ingresses`    |
 
+- Resource used in REST API endpoints.
+- Kind used in YAML/JSON manifests and Go code.
+
 ## Sample of using RESTMapper
 ```go
 package main
