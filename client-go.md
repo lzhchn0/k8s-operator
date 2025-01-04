@@ -214,3 +214,54 @@ Kubernetes and `client-go` follow **semantic versioning** (e.g., `v1.20.0`), whi
 - **Patch version (0)**: Indicates backward-compatible bug fixes.
 
 For `client-go`, the versioning aligns with Kubernetes releases but may not always match exactly.
+
+**Code Example**
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "log"
+
+    metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+    "k8s.io/client-go/kubernetes"
+    "k8s.io/client-go/tools/clientcmd"
+)
+
+func main() {
+    // Load kubeconfig
+    config, err := clientcmd.BuildConfigFromFlags("", clientcmd.RecommendedHomeFile)
+    if err != nil {
+        log.Fatalf("Error building kubeconfig: %v", err)
+    }
+
+    // Create clientset
+    clientset, err := kubernetes.NewForConfig(config)
+    if err != nil {
+        log.Fatalf("Error creating clientset: %v", err)
+    }
+
+    // List Pods in the default namespace
+    pods, err := clientset.CoreV1().Pods("default").List(context.TODO(), metav1.ListOptions{})
+    if err != nil {
+        log.Fatalf("Error listing pods: %v", err)
+    }
+
+    // Print Pod names
+    for _, pod := range pods.Items {
+        fmt.Println(pod.Name)
+    }
+}
+```
+
+In your `go.mod` file:
+```go
+module my-kubernetes-app
+
+go 1.20
+
+require (
+    k8s.io/client-go v0.22.0
+)
+```
