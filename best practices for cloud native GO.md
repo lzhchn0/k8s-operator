@@ -1,4 +1,4 @@
-describe best practice for go development from cloud native perspective
+# Describe best practice for go development from cloud native perspective
 
 Essence of Cloud Native Computing
 - Scalable: Handle growing workloads without degradation.
@@ -14,6 +14,10 @@ Essence of Cloud Native Computing
      - **CI/CD Pipelines**: Automate testing and deployment to ensure rapid, reliable releases.
 - Challenges: unpredictability, complexity.
 - Benefits: scalability, flexibility.
+- **harness the power of scale**
+     - **Elasticity**: Systems can scale up or down dynamically to handle varying workloads.
+     - **Distributed computing**: Workloads are spread across multiple nodes, improving performance and fault tolerance.
+     - **Automation**: Tools like Kubernetes automate resource management, reducing operational overhead.
   
 equivalent
 - curl http://127.0.0.1:8080/apis/apps/v1
