@@ -5,6 +5,17 @@ cd /root/shared-lib-demo
 go mod init shared-lib-demo
 ```
 
+   - The directory structure:
+     ```
+     /root/shared-lib-demo/
+     ├── go.mod
+     ├── pkg/
+     │   └── mathops/
+     │       └── mathops.go
+     └── main.go
+     ```
+
+
 
 
 ## Create the `pkg/mathops/mathops.go` file with the following content:
@@ -48,16 +59,3 @@ go install -buildmode=shared -linkshared ./pkg/mathops
 ```
 ---
      
-```bash
-go mod init shared-lib-demo
-```
-
-   - The directory structure:
-     ```
-     /root/shared-lib-demo/
-     ├── go.mod
-     ├── pkg/
-     │   └── mathops/
-     │       └── mathops.go
-     └── main.go
-     ```
