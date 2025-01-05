@@ -139,3 +139,5 @@ PKG_CONFIG='pkg-config'
 GOGCCFLAGS='-fPIC -m64 -pthread -Wl,--no-gc-sections -fmessage-length=0 -ffile-prefix-map=/tmp/go-build46567694=/tmp/go-build -gno-record-gcc-switches'
 
 ```
+
+![alt text](./go_env.jpeg)
