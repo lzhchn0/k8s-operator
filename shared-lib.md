@@ -1,14 +1,18 @@
 ## **Verify Your Project Structure**
 
-   - The directory structure:
-     ```
-     /root/shared-lib-demo/
-     ├── go.mod
-     ├── pkg/
-     │   └── mathops/
-     │       └── mathops.go
-     └── main.go
-     ```
+```bash
+mkdir -p  /root/shared-lib-demo/pkg/mathops
+```
+
+- The directory structure:
+  ```
+  /root/shared-lib-demo/
+  ├── go.mod
+  ├── pkg/
+  │   └── mathops/
+  │       └── mathops.go
+  └── main.go
+  ```
 
 
 
