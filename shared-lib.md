@@ -53,6 +53,7 @@ func main() {
 ```
 
 ```bash
+cd /root/shared-lib-demo
 go install -buildmode=shared std
 ```
 ## Otherwise Errors and Explaination:
