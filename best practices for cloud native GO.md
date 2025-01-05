@@ -1,5 +1,11 @@
 describe best practice for go development from cloud native perspective
 
+Nature of Cloud Native
+- Scalable: Handle growing workloads without degradation.
+- Resilient: Recover quickly from failures.
+- Efficient: Optimize resource usage and reduce costs.
+
+
 equivalent
 - curl http://127.0.0.1:8080/apis/apps/v1
 - kubectl get --raw /apis/apps/v1
