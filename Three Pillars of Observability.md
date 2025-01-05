@@ -2,6 +2,16 @@
 
 ## Tracing
 
+### **What is Tracing (Distributed Tracing)?**
+   - **Definition**:
+     - Tracing is a technique used to **track and visualize the flow of a request** as it moves through a distributed system.
+     - It captures the **path of a request** across multiple services, components, and boundaries (e.g., microservices, databases, APIs).
+
+   - **Purpose**:
+     - Tracing helps developers and operators understand how a request is processed, identify bottlenecks, and debug issues in complex systems.
+
+
+
 ### **Key Components of Tracing**
    - **Trace**:
      - A **trace** is the complete record of a request’s journey through the system. It includes all the spans associated with the request.
