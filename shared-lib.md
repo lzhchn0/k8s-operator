@@ -43,14 +43,14 @@ func main() {
 ```
      
      
-     ```bash
-     go install -buildmode=shared -linkshared ./pkg/mathops
-     ```
+```bash
+go install -buildmode=shared -linkshared ./pkg/mathops
+```
 ---
      
-     ```bash
-     go mod init shared-lib-demo
-     ```
+```bash
+go mod init shared-lib-demo
+```
 
    - The directory structure:
      ```
