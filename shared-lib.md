@@ -63,6 +63,8 @@ cannot use packages shared-lib-demo/pkg/mathops and runtime/cgo from different r
 ```
 - The error occurs because Go cannot mix packages from different roots when building a shared library. To resolve this, either avoid using shared libraries or rebuild the standard library as a shared library. Shared libraries in Go are not commonly used, so carefully consider whether they are necessary for your use case.
 
+- makeslice: cap out of range
+- This error typically occurs when attempting to create a slice with a length greater than its capacity
 
 ## **Initialize the Go Module**
 ```bash
