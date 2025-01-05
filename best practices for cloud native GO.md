@@ -14,10 +14,14 @@ Essence of Cloud Native Computing
      - **CI/CD Pipelines**: Automate testing and deployment to ensure rapid, reliable releases.
 - Challenges: unpredictability, complexity.
 - Benefits: scalability, flexibility.
-- **harness the power of scale**
+- **Harness the power of scale**
      - **Elasticity**: Systems can scale up or down dynamically to handle varying workloads.
      - **Distributed computing**: Workloads are spread across multiple nodes, improving performance and fault tolerance.
      - **Automation**: Tools like Kubernetes automate resource management, reducing operational overhead.
+- **Problems Caused by Scale**    
+     - **Performance bottlenecks**: Increased traffic or data volume can overwhelm systems.
+     - **Resource management**: Allocating and managing resources efficiently becomes harder.
+     - **Failure points**: Larger systems have more components, increasing the likelihood of failures.
   
 equivalent
 - curl http://127.0.0.1:8080/apis/apps/v1
