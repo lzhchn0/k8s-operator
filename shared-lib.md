@@ -77,3 +77,8 @@ go install -buildmode=shared -linkshared ./pkg/mathops
 ```
 ---
      
+## **Clean the Build Cache**:
+   - Clear the Go build cache to ensure there are no corrupted artifacts:
+     ```bash
+     go clean -cache -modcache -i -r
+     ```
