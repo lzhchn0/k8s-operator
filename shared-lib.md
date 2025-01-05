@@ -73,7 +73,7 @@ go mod init shared-lib-demo
      
 ## **Rebuild the Standard Library as a Shared Library**     
 ```bash
-go install -buildmode=shared -linkshared ./pkg/mathops
+go install -x -buildmode=shared -linkshared ./pkg/mathops
 ```
 ---
      
