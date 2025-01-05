@@ -5,6 +5,7 @@ Essence of Cloud Native Computing
 - Resilient: Recover quickly from failures.
 - Efficient: Optimize resource usage and reduce costs.
 - Harnessing the power of scale to solve problems while mitigating the inherent challenges of distributed systems.
+- **Techniques and Technologies**
      - **Microservices**: Breaking applications into smaller, independent services that can be scaled and deployed independently.
      - **Containers**: Packaging applications and dependencies into lightweight, portable units.
      - **DevOps**: Integrating development and operations to improve collaboration and automation.
