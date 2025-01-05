@@ -52,6 +52,17 @@ func main() {
 }
 ```
 
+```bash
+go install -buildmode=shared std
+```
+## Otherwise Errors and Explaination:
+- The error message:
+```
+cannot use packages shared-lib-demo/pkg/mathops and runtime/cgo from different roots and /usr/local/go/pkg/linux_amd64_dynlink
+```
+- The error occurs because Go cannot mix packages from different roots when building a shared library. To resolve this, either avoid using shared libraries or rebuild the standard library as a shared library. Shared libraries in Go are not commonly used, so carefully consider whether they are necessary for your use case.
+
+
 ## **Initialize the Go Module**
 ```bash
 cd /root/shared-lib-demo
@@ -59,7 +70,7 @@ go mod init shared-lib-demo
 ```
 
      
-     
+## **Rebuild the Standard Library as a Shared Library**     
 ```bash
 go install -buildmode=shared -linkshared ./pkg/mathops
 ```
