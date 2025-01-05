@@ -1,3 +1,12 @@
+## **Initialize the Go Module**
+
+```bash
+cd /root/shared-lib-demo
+go mod init shared-lib-demo
+```
+
+
+
 ## Create the `pkg/mathops/mathops.go` file with the following content:
 
 ```go
