@@ -12,8 +12,9 @@ Essence of Cloud Native Computing
      - **Kubernetes**: Orchestrates containers and manages resources at scale.
      - **Service Meshes**: Handle communication between microservices (e.g., Istio, Linkerd).
      - **CI/CD Pipelines**: Automate testing and deployment to ensure rapid, reliable releases.
-
-
+- Challenges: unpredictability, complexity.
+- Benefits: scalability, flexibility.
+  
 equivalent
 - curl http://127.0.0.1:8080/apis/apps/v1
 - kubectl get --raw /apis/apps/v1
