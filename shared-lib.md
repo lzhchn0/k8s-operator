@@ -1,9 +1,4 @@
-## **Initialize the Go Module**
-
-```bash
-cd /root/shared-lib-demo
-go mod init shared-lib-demo
-```
+## **Verify Your Project Structure**
 
    - The directory structure:
      ```
@@ -52,6 +47,13 @@ func main() {
     fmt.Println("Difference:", diff)
 }
 ```
+
+## **Initialize the Go Module**
+```bash
+cd /root/shared-lib-demo
+go mod init shared-lib-demo
+```
+
      
      
 ```bash
