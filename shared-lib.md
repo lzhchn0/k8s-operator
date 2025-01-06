@@ -235,3 +235,36 @@ Use tools like `ldd`, `readelf`, and `strace` to debug and understand how the li
      strace ./myprogram 2>&1 | grep openat
      ```
    - Look for lines where the program opens `.so` files.
+
+
+
+
+## How the Dynamic Linker Finds Shared Libraries:
+The dynamic linker on Linux searches for shared libraries in the following order (unless overridden by specific settings):
+
+1. **`LD_LIBRARY_PATH`**:
+   - If `LD_LIBRARY_PATH` is set, the linker looks in the directories listed in this variable first.
+
+2. **System Cache (`/etc/ld.so.cache`)**:
+   - The linker checks the system-wide cache of shared library locations, which is generated from the files in `/etc/ld.so.conf` and the contents of `/etc/ld.so.conf.d/`.
+   - You can update the cache by running:
+     ```bash
+     sudo ldconfig
+     ```
+
+3. **Default System Paths**:
+   - If the library is not found in the above locations, the linker searches in default system paths, such as:
+     - `/lib`
+     - `/lib64`
+     - `/usr/lib`
+     - `/usr/lib64`
+     - `/usr/local/lib`
+
+4. **Runpath or RPATH (Embedded in the Executable)**:
+   - If the executable was built with an `RPATH` or `RUNPATH` (embedded library search paths), the linker will use those paths to locate the shared libraries.
+   - You can check if your executable has an `RPATH` or `RUNPATH` using:
+     ```bash
+     readelf -d ./myprogram | grep RPATH
+     readelf -d ./myprogram | grep RUNPATH
+     ```
+
