@@ -123,6 +123,7 @@ Array is the key
 If there is an update to the child, metacontroller-0 will log an error message.
 - "msg": "Failed to create child, child object already exists",
 - Solution is, when updating an existing object, you must include the resourceVersion field in the metadata. This ensures that Kubernetes can handle concurrent updates correctly. The resourceVersion is obtained from the existing object.
+- [Update Methods, updateStrategy](https://metacontroller.github.io/metacontroller/api/decoratorcontroller.html?highlight=inplace#attachment-update-methods)
 
 How to debug metacontroller
 - check logs in metacontroller-0 pod, search keyword like "error", "can't find resource" 
