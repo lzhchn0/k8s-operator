@@ -141,3 +141,19 @@ GOGCCFLAGS='-fPIC -m64 -pthread -Wl,--no-gc-sections -fmessage-length=0 -ffile-p
 ```
 
 ![alt text](./go_env.jpeg)
+
+```bash
+go build -linkshared  main.go 
+```
+
+
+
+```
+$ ldd  ./main
+        linux-vdso.so.1 (0x00007ffcf9b9a000)
+        libstd.so => /usr/local/go/pkg/linux_amd64_dynlink/libstd.so (0x00007fb83fd5b000)
+        libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007fb83fb59000)
+        libdl.so.2 => /lib/x86_64-linux-gnu/libdl.so.2 (0x00007fb83fb53000)
+        libpthread.so.0 => /lib/x86_64-linux-gnu/libpthread.so.0 (0x00007fb83fb30000)
+        /lib64/ld-linux-x86-64.so.2 (0x00007fb842955000)
+```
