@@ -2,6 +2,7 @@
 - ianlancetaylor
 - [cmd/go: remove -buildmode=shared (not c-shared)](https://github.com/golang/go/issues/47788)
 - rasky
+- findleyr 
 
 ## **Verify Your Project Structure**
 
