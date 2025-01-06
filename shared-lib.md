@@ -143,10 +143,20 @@ GOGCCFLAGS='-fPIC -m64 -pthread -Wl,--no-gc-sections -fmessage-length=0 -ffile-p
 ![alt text](./go_env.jpeg)
 
 ```bash
-go build -linkshared  main.go 
+go install -v -x -buildmode=shared std
 ```
 
 
+
+```bash
+go build -linkshared  main.go 
+```
+
+```
+controlplane $ ls -ltr
+-rwxr-xr-x 1 root root 19664 Jan  6 02:00 shared-lib-demo
+-rwxr-xr-x 1 root root 19664 Jan  6 02:04 main
+```
 
 ```
 $ ldd  ./main
