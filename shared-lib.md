@@ -142,6 +142,8 @@ GOGCCFLAGS='-fPIC -m64 -pthread -Wl,--no-gc-sections -fmessage-length=0 -ffile-p
 
 ![alt text](./go_env.jpeg)
 
+### go version go1.19.4 linux/amd64
+
 ```bash
 go install -v -x -buildmode=shared std
 ```
