@@ -169,3 +169,69 @@ $ ldd  ./main
         libpthread.so.0 => /lib/x86_64-linux-gnu/libpthread.so.0 (0x00007fb83fb30000)
         /lib64/ld-linux-x86-64.so.2 (0x00007fb842955000)
 ```
+
+
+
+```bash
+export LD_LIBRARY_PATH=/path/to/your/shared/libraries:$LD_LIBRARY_PATH
+```
+
+
+main program works without `LD_LIBRARY_PATH` because the dynamic linker is finding the `.so` files through one of the following mechanisms:
+- The `.so` files are located in a default system path (e.g., `/usr/local/lib`).
+- The executable has an `RPATH` or `RUNPATH` embedded in it.
+- The `.so` files are registered in the system cache (`/etc/ld.so.cache`).
+
+Use tools like `ldd`, `readelf`, and `strace` to debug and understand how the linker is locating your shared libraries.
+
+## Workflow to Debug:
+1. **Check Shared Library Dependencies**:
+   ```bash
+   ldd ./myprogram
+   ```
+
+2. **Check for RPATH or RUNPATH**:
+   ```bash
+   readelf -d ./myprogram | grep RPATH
+   readelf -d ./myprogram | grep RUNPATH
+   ```
+
+3. **Check System Cache**:
+   ```bash
+   ldconfig -p | grep libmathops
+   ```
+
+4. **Trace Library Loading**:
+   ```bash
+   strace ./myprogram 2>&1 | grep openat
+   ```
+
+
+## Tools
+### 1. **`ldd`**:
+   - Run `ldd` on your executable to see which shared libraries it depends on and where they are located:
+     ```bash
+     ldd ./myprogram
+     ```
+   - Example output:
+     ```
+     linux-vdso.so.1 (0x00007ffd45df0000)
+     libmathops.so => /usr/local/lib/libmathops.so (0x00007f8c12345000)
+     libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007f8c12123000)
+     /lib64/ld-linux-x86-64.so.2 (0x00007f8c12367000)
+     ```
+   - In this example, `libmathops.so` is located in `/usr/local/lib`.
+
+### 2. **`readelf`**:
+   - Use `readelf` to check for `RPATH` or `RUNPATH` in your executable:
+     ```bash
+     readelf -d ./myprogram | grep RPATH
+     readelf -d ./myprogram | grep RUNPATH
+     ```
+
+### 3. **`strace`**:
+   - Use `strace` to trace the system calls made by your program and see where it is looking for shared libraries:
+     ```bash
+     strace ./myprogram 2>&1 | grep openat
+     ```
+   - Look for lines where the program opens `.so` files.
