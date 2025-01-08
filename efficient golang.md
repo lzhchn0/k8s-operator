@@ -1,0 +1,1 @@
+# Hammer out rules for efficient golang
