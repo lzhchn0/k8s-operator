@@ -8,5 +8,5 @@ The enableServiceLinks parameter(in PodSpec v1) is enabled by default but is oft
 
 admission controller is a powerful policy enforcement tool, in a given cloud native environment 
 
-<ins>Must check if informer gets synced before admission controller. </ins>
+<ins>Need to verify if the informer is synchronized before the admission controller.</ins>
 
