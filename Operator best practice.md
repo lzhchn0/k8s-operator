@@ -1,8 +1,65 @@
 ## Informer
 We need to ensure the informer is synchronized before it is used, specifically prior to the Admission Controller.
 
+### Explaination 1
 
-### Explaination
+Certainly! This statement is related to the use of **informers** in Kubernetes admission controllers, specifically in the context of **admission plug-ins**. Let me break it down for you:
+
+### Key Concepts:
+1. **Informers**:
+   - Informers are part of the Kubernetes client-go library and are used to watch and cache resources (e.g., Pods, Deployments, ConfigMaps) in a Kubernetes cluster.
+   - They provide a local cache of the cluster state and notify listeners when changes occur.
+
+2. **Admission Plug-ins**:
+   - Admission plug-ins are components in Kubernetes that intercept requests to the API server (e.g., creating or updating a resource) and can either allow or deny the request.
+   - Examples include `ValidatingAdmissionWebhook` and `MutatingAdmissionWebhook`.
+
+3. **Synced Informers**:
+   - When an informer starts, it needs time to populate its cache with the current state of the cluster. Until this is done, the informer is not considered "synced."
+   - A synced informer ensures that the local cache is up-to-date with the cluster's state.
+
+### The Statement Explained:
+- **"If informers are used in admission plug-ins, always check first that the informers are synced before using them in the actual Admit() or Validate() functions."**:
+  - When writing admission plug-ins, you might rely on informers to make decisions (e.g., checking if a resource already exists or validating against other resources).
+  - Before using the informer's cache in the `Admit()` or `Validate()` functions, you must ensure the informer has fully synced. If the informer is not synced, the cache might be incomplete or stale, leading to incorrect decisions.
+
+- **"Reject requests with a Forbidden error before that is the case."**:
+  - If the informer is not yet synced, you should reject the admission request with a `Forbidden` error. This is a safety measure to prevent incorrect decisions based on incomplete data.
+  - For example, you might return an error like: `admission.Forbidden("informer cache not synced")`.
+
+### Why Is This Important?
+- **Data Consistency**:
+  - Using an unsynced informer could lead to incorrect decisions, such as allowing a resource creation that violates a policy because the informer's cache was missing critical data.
+- **Cluster Stability**:
+  - Rejecting requests until the informer is synced ensures that your admission controller operates with accurate and consistent data, maintaining the integrity of the cluster.
+
+### Example in Code:
+Here’s a simplified example of how you might implement this:
+
+```go
+func (p *MyAdmissionPlugin) Admit(ctx context.Context, admissionSpec *admissionv1.AdmissionRequest) (*admissionv1.AdmissionResponse, error) {
+    // Check if the informer is synced
+    if !p.myInformer.HasSynced() {
+        return &admissionv1.AdmissionResponse{
+            Allowed: false,
+            Result: &metav1.Status{
+                Code:    http.StatusForbidden,
+                Message: "Informer cache not synced",
+            },
+        }, nil
+    }
+
+    // Proceed with admission logic using the synced informer
+    // ...
+}
+```
+
+### Summary:
+- Always ensure informers are synced before using their cache in admission logic.
+- Reject requests with a `Forbidden` error if the informer is not yet synced to avoid making decisions based on incomplete or stale data.
+- This practice ensures the reliability and correctness of your admission plug-ins.
+
+### Explaination 2
 
 The need to check if an **informer is synced** depends on the context in which the informer is being used. While it is **critical to check in admission webhooks**, there are other scenarios where you might or might not need to check. Let’s break this down:
 
