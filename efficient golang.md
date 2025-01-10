@@ -9,3 +9,10 @@ If you want to pre-install dependencies to speed up builds, you can use go insta
   go install ./...
   go build -o bin/nginx-operator main.go
   ```
+
+  t nginx-operator
+  ```bash
+  go install ./...
+  GO111MODULE=on CGO_ENABLED=0 go build -o bin/nginx-operator main.go
+  ```
+
