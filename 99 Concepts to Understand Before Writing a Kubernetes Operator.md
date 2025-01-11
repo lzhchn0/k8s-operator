@@ -1,6 +1,10 @@
-## client-go
+## client-go library
 
-## controller-runtime
+## controller-runtime library
+
+## deeocopy-gen
+## lister-gen
+## informer-gen
 
 ## Global Tags vs. Local Tags
 
