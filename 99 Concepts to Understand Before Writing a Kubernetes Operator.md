@@ -18,3 +18,5 @@
 ## It's better to rewrite your operator than to spend time debugging it.
 
 ## Opt for incremental builds rather than full builds in Operator development.
+
+## Operator SDK: All your defined custom resources may be reprocessed on startup
