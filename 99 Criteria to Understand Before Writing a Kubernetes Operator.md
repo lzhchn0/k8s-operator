@@ -34,3 +34,5 @@
    - If the operator is running on a laptop or in a CI/CD pipeline, the IP address or hostname may change frequently, making it difficult to configure the webhook URL.
 
 ## Operator SDK: All your defined custom resources may be reprocessed on startup
+
+## The resourceVersion field is used to detect conflicts and ensure consistency
