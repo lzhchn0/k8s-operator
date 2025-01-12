@@ -19,4 +19,6 @@
 
 ## Opt for incremental builds rather than full builds in Operator development.
 
+## As an escalation path for operator development, begin with Metacontroller, then progress to Operator SDK, and ultimately Kubebuilder. This approach will grant you progressively greater control over every aspect of Custom Resources.
+
 ## Operator SDK: All your defined custom resources may be reprocessed on startup
