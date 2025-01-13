@@ -8,6 +8,32 @@
 
 ## Global Tags vs. Local Tags
 
+- **Global Tags Definition:**
+  - Global tags are annotations applied at the **package level** (typically in a `pkg/apis/group/version/doc.go` file before "package v1alpha1).
+  - They affect all types within the package unless overridden by local tags.
+
+- **Global Tags Purpose:**
+  - They provide default behavior for code generation tools like `deepcopy-gen`, `informer-gen`, and `client-gen` across the entire package.
+
+- **Common Global Tags:**
+  - `+k8s:deepcopy-gen=package`: Enable deepcopy generation for all types in the package.
+  - `+groupName=<group>`: Specify the API group for the package.
+  - `+k8s:openapi-gen=true`: Enable OpenAPI schema generation for the package.
+  - `+k8s:conversion-gen=<package>`: Enable conversion functions for the package.
+
+- **Local Tags Definition:**
+  - Local tags are annotations applied to **individual types or fields** within a Go file.
+  - They override or supplement the behavior specified by global tags.
+
+- **Local Tags Purpose:**
+  - They allow fine-grained control over code generation for specific types or fields.
+
+- **Common Local Tags:**
+  - `+k8s:deepcopy-gen=true/false`: Enable or disable deepcopy generation for a specific type.
+  - `+k8s:deepcopy-gen:interfaces=<interface>`: Specify that the type implements a particular interface (e.g., `runtime.Object`).
+  - `+kubebuilder:validation:Required`: Mark a field as required in the OpenAPI schema.
+  - `+kubebuilder:subresource:status`: Enable a status subresource for the type.
+
 
 ## Let Informer to watch resources in a limited scope. 
 
