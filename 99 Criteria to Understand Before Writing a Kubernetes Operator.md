@@ -1,3 +1,7 @@
+## Ensure idempotency
+
+## Handle partial or inconsistent states gracefully.
+
 ## client-go library
 
 ## controller-runtime library
