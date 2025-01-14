@@ -2,10 +2,18 @@
 
 ## controller-runtime library
 
-## deeocopy-gen
+## deepcopy-gen
+   - Generates deepcopy methods for types, ensuring safe copying of resources.
+   - Required for all Kubernetes resources.
 ## lister-gen
-## informer-gen
+   - Generates **listers** that provide type-safe access to resources stored in the informer's cache.
+   - Listers are used by controllers to efficiently retrieve resources.
 
+## informer-gen
+   - Generates **informers** that watch and cache resources from the Kubernetes API server.
+   - Informers use listers to provide cached access to resources.
+## client-gen
+   - Generates **clientsets** for custom resources, which are used to interact with the Kubernetes API server.
 ## Global Tags vs. Local Tags
 
 - **Global Tags Definition:**
