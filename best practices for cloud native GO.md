@@ -296,3 +296,22 @@ func main() {
     fmt.Printf("Deserialized Pod: %+v\n", decoded)
 }
 ```
+## **Unreliable Environments**
+   Cloud environments are inherently **unreliable** due to factors like:
+   - **Network instability:** Latency, packet loss, or temporary outages.
+   - **Hardware failures:** Servers or disks failing unexpectedly.
+   - **Resource contention:** Limited CPU, memory, or storage causing performance degradation.
+   - **Ephemeral infrastructure:** Containers or virtual machines being terminated or rescheduled dynamically.
+   - **Partial failures:** Some components of a system failing while others continue to operate.
+
+   These challenges make it difficult to guarantee the same level of reliability as traditional, monolithic systems running on dedicated hardware.
+
+
+## **Building Reliable Services**
+   Despite the unreliable nature of cloud environments, cloud-native applications aim to provide **reliable services** to users. This involves:
+   - **Resilience:** Designing services to recover from failures gracefully.
+   - **Scalability:** Ensuring services can handle increased load by scaling horizontally.
+   - **Observability:** Monitoring and logging to detect and diagnose issues quickly.
+   - **Automation:** Using tools to automate deployment, scaling, and recovery processes.
+
+   The goal is to ensure that even if individual components fail, the overall system remains functional and responsive.
