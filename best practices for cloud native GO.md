@@ -323,6 +323,124 @@ func main() {
 - Throttle
 - Timeout
 
+---
+Stability patterns are essential for building reliable and resilient cloud-native applications. They help manage failures, control resource usage, and ensure that services remain responsive even under stress. Let’s break down each of the patterns you mentioned:
+
+---
+
+### 1. **Circuit Breaker**
+   - **Purpose:** Prevents a system from repeatedly trying to execute an operation that’s likely to fail, which can lead to cascading failures.
+   - **How it works:**
+     - The circuit breaker monitors for failures (e.g., network timeouts, errors).
+     - If failures exceed a threshold, the circuit "trips" and stops making requests to the failing service.
+     - After a cooldown period, the circuit allows a limited number of test requests to check if the service has recovered.
+   - **Use case:** Protecting a service from overloading when a downstream service is failing.
+   - **Example in Go:** Use the `github.com/sony/gobreaker` library to implement a circuit breaker.
+
+   ```go
+   cb := gobreaker.NewCircuitBreaker(gobreaker.Settings{
+       Name:    "my-service",
+       Timeout: 5 * time.Second,
+   })
+
+   result, err := cb.Execute(func() (interface{}, error) {
+       return callDownstreamService()
+   })
+   ```
+
+---
+
+### 2. **Debounce**
+   - **Purpose:** Ensures that a function is only called after a certain amount of time has passed without it being triggered again.
+   - **How it works:**
+     - When an event occurs, a timer starts.
+     - If the event occurs again before the timer expires, the timer resets.
+     - The function is only executed when the timer expires without further events.
+   - **Use case:** Handling user input (e.g., search suggestions) or reducing the frequency of expensive operations.
+   - **Example in Go:** Use a goroutine and a timer to implement debouncing.
+
+   ```go
+   func debounce(interval time.Duration, fn func()) func() {
+       var timer *time.Timer
+       return func() {
+           if timer != nil {
+               timer.Stop()
+           }
+           timer = time.AfterFunc(interval, fn)
+       }
+   }
+   ```
+
+---
+
+### 3. **Retry**
+   - **Purpose:** Automatically retries a failed operation, often with a delay, to handle transient failures.
+   - **How it works:**
+     - If an operation fails, it is retried a specified number of times.
+     - A delay (e.g., exponential backoff) is often added between retries to avoid overwhelming the system.
+   - **Use case:** Handling temporary network issues or transient errors in downstream services.
+   - **Example in Go:** Use the `github.com/avast/retry-go` library.
+
+   ```go
+   err := retry.Do(
+       func() error {
+           return callDownstreamService()
+       },
+       retry.Attempts(3),
+       retry.Delay(time.Second),
+   )
+   ```
+
+---
+
+### 4. **Throttle**
+   - **Purpose:** Limits the rate at which a function can be called to prevent overloading a system.
+   - **How it works:**
+     - A rate limiter allows only a certain number of requests per time period (e.g., 100 requests per second).
+     - Excess requests are either queued or rejected.
+   - **Use case:** Protecting a service from being overwhelmed by too many requests.
+   - **Example in Go:** Use the `golang.org/x/time/rate` package.
+
+   ```go
+   limiter := rate.NewLimiter(rate.Every(time.Second), 10) // 10 requests per second
+
+   for i := 0; i < 20; i++ {
+       if !limiter.Allow() {
+           fmt.Println("Request throttled")
+           continue
+       }
+       fmt.Println("Request allowed")
+   }
+   ```
+
+---
+
+### 5. **Timeout**
+   - **Purpose:** Ensures that an operation does not run indefinitely by setting a maximum duration for its execution.
+   - **How it works:**
+     - A timeout is set for an operation (e.g., an HTTP request).
+     - If the operation does not complete within the specified time, it is canceled.
+   - **Use case:** Preventing long-running operations from blocking the system.
+   - **Example in Go:** Use Go’s `context` package to implement timeouts.
+
+   ```go
+   ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
+   defer cancel()
+
+   req, err := http.NewRequestWithContext(ctx, http.MethodGet, "https://example.com", nil)
+   if err != nil {
+       log.Fatal(err)
+   }
+
+   resp, err := http.DefaultClient.Do(req)
+   if err != nil {
+       log.Fatal(err)
+   }
+   defer resp.Body.Close()
+   ```
+
+---
+
 ### Summary of Stability Patterns:
 | **Pattern**      | **Purpose**                                      | **Use Case**                                  |
 |-------------------|--------------------------------------------------|----------------------------------------------|
