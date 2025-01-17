@@ -56,7 +56,8 @@
 ## It's better to rewrite your operator than to spend time debugging it.
 
 ## Opt for incremental builds rather than full builds in Operator development.
-
+- The shared build mode will not be fully supported along the way.
+- The plugin mode has some limitations. 
 ## As an escalation path for operator development, begin with Metacontroller, then progress to Operator SDK, and ultimately Kubebuilder. This approach will grant you progressively greater control over every aspect of Custom Resources.
 
 ## Run webhook in your cluster, not outside the cluster, Otherwise there will be
