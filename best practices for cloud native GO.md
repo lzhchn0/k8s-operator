@@ -315,3 +315,28 @@ func main() {
    - **Automation:** Using tools to automate deployment, scaling, and recovery processes.
 
    The goal is to ensure that even if individual components fail, the overall system remains functional and responsive.
+
+## Stability Patterns
+- Circuit Breaker
+- Debounce
+- Retry
+- Throttle
+- Timeout
+
+### Summary of Stability Patterns:
+| **Pattern**      | **Purpose**                                      | **Use Case**                                  |
+|-------------------|--------------------------------------------------|----------------------------------------------|
+| **Circuit Breaker** | Prevents cascading failures by stopping requests to a failing service. | Protecting downstream services.              |
+| **Debounce**      | Reduces the frequency of function calls.         | Handling user input or expensive operations. |
+| **Retry**         | Automatically retries failed operations.         | Handling transient failures.                 |
+| **Throttle**      | Limits the rate of function calls.               | Preventing system overload.                  |
+| **Timeout**       | Sets a maximum duration for an operation.        | Preventing long-running operations.          |
+
+These patterns are crucial for building resilient cloud-native applications in Go. By combining them, you can create systems that gracefully handle failures, manage resources efficiently, and provide a reliable user experience.
+
+## Concurrency Patterns
+- Fan in
+- Fan out
+- Future
+- Sharding
+
