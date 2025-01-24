@@ -5,6 +5,10 @@ This will create a Redis cluster with one master and three workers.
 - Create a Redis master Deployment
 
 ```
+git clone https://github.com/SAP/redis-operator.git
+```{{exec}}
+
+```
 kubectl apply -f - << EOF
 apiVersion: apps/v1
 kind: Deployment
