@@ -1,3 +1,7 @@
+The `doc.go` file is used to provide **package-level documentation**.
+---
+The `types.go` file is used to define **types**.
+
 ## Ensure idempotency
 
 ## Handle partial or inconsistent states gracefully.
