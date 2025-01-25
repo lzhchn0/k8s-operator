@@ -157,7 +157,7 @@ Download/install kubebuilder for latest
 curl -L -o kubebuilder "https://go.kubebuilder.io/dl/latest/$(go env GOOS)/$(go env GOARCH)"
 chmod +x kubebuilder && mv kubebuilder /usr/local/bin/
 ```{{exec}}
-
+```
 Release		Release date	Maintenance end
 go1		3/28/2012	12/1/2013
 go1.1		5/13/2013	6/18/2014
@@ -183,5 +183,5 @@ go1.20		2/1/2023	Q1 2024
 go1.21		8/8/2023	Q3 2024
 go1.22		2/6/2024	Q1 2025
 
-
+```
 
