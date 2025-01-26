@@ -122,10 +122,7 @@ export GOROOT=/usr/local/go
 export PATH=/usr/local/go/bin:$GOPATH/bin:$PATH
 alias h=history
 alias kb=kubebuilder
-```{{exec}}
 
-Setup k8s commands env
-```shell
 alias kx='f() { [ "$1" ] && kubectl config use-context $1 || kubectl config current-context ; } ; f'
 alias kn='f() { [ "$1" ] && kubectl config set-context --current --namespace $1 || kubectl config view --minify | grep namespace | cut -d" " -f6 ; } ; f'
 
