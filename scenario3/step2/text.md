@@ -10,6 +10,11 @@ git clone https://github.com/gardener/gardener.git
 git clone https://github.com/NVIDIA/gpu-operator.git
 ```{{exec}}
 
+```
+cd /root/gpu-operator
+go mod download
+```{{exec}}
+
 
 ```
 kubectl apply -f - << EOF
