@@ -13,6 +13,13 @@ git clone https://github.com/NVIDIA/gpu-operator.git
 ```
 cd /root/gpu-operator
 go mod download
+
+cd /root/gardener
+go mod download
+
+cd /root/redis-operator
+go mod download
+
 ```{{exec}}
 
 
