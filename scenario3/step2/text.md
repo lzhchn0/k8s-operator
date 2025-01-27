@@ -6,7 +6,10 @@ This will create a Redis cluster with one master and three workers.
 
 ```
 git clone https://github.com/SAP/redis-operator.git
+git clone https://github.com/gardener/gardener.git
+git clone https://github.com/NVIDIA/gpu-operator.git
 ```{{exec}}
+
 
 ```
 kubectl apply -f - << EOF
