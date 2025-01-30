@@ -162,3 +162,12 @@ func (c *consiteController) getChildren(parent *unstructured.Unstructured) (resp
 ```
 
 These options align with the typical patterns used in generated informer code, where caches are maintained for parent and child resources.
+
+41. **Use a Go Version Manager**
+If you frequently switch between Go versions, consider using a version manager like **gvm** (Go Version Manager) or **asdf**. These tools allow you to easily switch between Go versions without reinstalling:
+- **gvm**:
+  ```bash
+  gvm install go1.21.1
+  gvm use go1.21.1
+  ```
+
