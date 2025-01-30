@@ -179,6 +179,8 @@ To avoid unexpected breaks in the future, lock your dependencies to specific ver
 - Pin dependencies to specific versions in `go.mod` to ensure consistency.
 
 
+
+
 45. **Build Individual Packages** to isolate individual problems. 
    ```bash
    go build ./pkg/...
@@ -186,5 +188,24 @@ To avoid unexpected breaks in the future, lock your dependencies to specific ver
    This can help identify which part of the codebase is causing the errors.
 
 46. Using the **Go toolchain judiciously**
+
+- **Consistent Formatting**: Use `gofmt` to format your code according to Go's standard style.
+  ```bash
+  gofmt -w .
+  ```
+- **Simplify with `goimports`**: Use `goimports` to automatically format and organize imports.
+  ```bash
+  goimports -w .
+  ```
+
+- **Catch Common Issues**: Run `go vet` to detect static potential issues in your code.
+  ```bash
+  go vet ./...
+  ```
+- **Use Advanced Linters**: Tools like **golangci-lint** aggregate multiple linters for comprehensive code analysis.
+  ```bash
+  golangci-lint run
+  ```
+
 
 
