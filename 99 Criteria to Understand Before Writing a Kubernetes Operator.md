@@ -172,11 +172,11 @@ If you frequently switch between Go versions, consider using a version manager l
   ```
 42. **Lock Your Dependencies**
 To avoid unexpected breaks in the future, lock your dependencies to specific versions:
-1. Use `go mod tidy` to clean up your `go.mod` and `go.sum` files:
+- Use `go mod tidy` to clean up your `go.mod` and `go.sum` files:
    ```bash
    go mod tidy
    ```
-2. Pin dependencies to specific versions in `go.mod` to ensure consistency.
+- Pin dependencies to specific versions in `go.mod` to ensure consistency.
 
 
 
