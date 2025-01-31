@@ -195,6 +195,10 @@ To avoid unexpected breaks in the future, lock your dependencies to specific ver
   ```
 - **Simplify with `goimports`**: Use `goimports` to automatically format and organize imports.
   ```bash
+  go install golang.org/x/tools/cmd/goimports@latest
+  ```
+  
+  ```bash
   goimports -w .
   ```
 
