@@ -19,7 +19,7 @@ inline.sh delete component_1
 
 
 - Operations of component_2
-
+```
 component_2 is a yaml file has the following format,
 label: loc-01
 file: ai-controller.go
@@ -30,4 +30,4 @@ type ComFinalizer struct{
   Name string
 }
 // == component_2 END ==
-
+```
