@@ -21,7 +21,7 @@ The `types.go` file is used to define **types**.
    - Generates **informers** that watch and cache resources from the Kubernetes API server.
    - Informers use listers to provide cached access to resources.
 ## client-gen
-   - Generates **clientsets** for custom resources, which are used to interact with the Kubernetes API server.
+   - Generates typed **clientsets** for custom resources, which are used to interact with the Kubernetes API server.
 ## Global Tags vs. Local Tags
 
 - **Global Tags Definition:**
