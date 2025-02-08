@@ -220,6 +220,8 @@ To avoid unexpected breaks in the future, lock your dependencies to specific ver
             controllerutil.AddFinalizer(cronJob, myFinalizerName)
      // being deleted
      if controllerutil.ContainsFinalizer(cronJob, myFinalizerName) {
+
+     controllerutil.RemoveFinalizer(cronJob, myFinalizerName)
      ```
 
 
