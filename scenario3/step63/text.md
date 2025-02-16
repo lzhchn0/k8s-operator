@@ -20,11 +20,12 @@ k get pods
 > forward port of grafana to browser
 ```
  kubectl port-forward svc/prometheus-operator-grafana --address=0.0.0.0  8080:80
- curl http://192.168.2.45:8099
+ 
 ```{{exec}}
 
 ```
  kubectl port-forward svc/prometheus-operator-grafana --address=0.0.0.0  8099:80
+ curl http://192.168.2.45:8099
 ```{{exec}}
 
 > reset grafana credential --
