@@ -33,6 +33,10 @@ k get pods
 /usr/share/grafana/bin/grafana-cli admin reset-admin-password
 ```{{exec}}
 
+> restart grafana statefulset
+
+kubectl rollout restart deployment prometheus-operator-kube-state-metrics
+
 > grafana credential
 
 kubectl port-forward --address 0.0.0.0 service/prometheus-operator-grafana  8089:80
