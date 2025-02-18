@@ -32,3 +32,11 @@ k get pods
 ```
 /usr/share/grafana/bin/grafana-cli admin reset-admin-password
 ```{{exec}}
+
+> grafana credential
+
+kubectl port-forward --address 0.0.0.0 service/prometheus-operator-grafana  8089:80
+
+kubectl get secret  prometheus-operator-grafana  -n monitoring -o jsonpath="{.data.admin-password}" | base64 --decode ; echo ; echo
+
+admin/prom-operator
