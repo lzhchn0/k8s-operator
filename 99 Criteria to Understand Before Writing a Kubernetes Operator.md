@@ -215,7 +215,8 @@ To avoid unexpected breaks in the future, lock your dependencies to specific ver
 
 98. Finalizers is an advanced topic. Do you need it? Usually the Kubernetes garbage collector does the cleanup for you if owner references are configured well.
 
-99. How to write a finalizer
+It is usually a controller that removes the finalizer. After doing custom cleanup on resource deletion (deletionTimestamp set).
+100. How to write a finalizer
 
      ```
      myFinalizerName := "batch.tutorial.kubebuilder.io/finalizer"
