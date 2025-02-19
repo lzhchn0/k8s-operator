@@ -211,6 +211,9 @@ To avoid unexpected breaks in the future, lock your dependencies to specific ver
   ```bash
   golangci-lint run
   ```
+
+98. If you need a dedicated disk per replica, a StatefulSet is correct.
+
 98. When building our operators, we usually prefer deployments over statefulsets and cronjobs over jobs.
 
 98. Finalizers is an advanced topic. Do you need it? Usually the Kubernetes garbage collector does the cleanup for you if owner references are configured well.
