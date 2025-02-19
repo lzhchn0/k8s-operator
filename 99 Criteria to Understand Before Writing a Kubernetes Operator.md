@@ -213,6 +213,8 @@ To avoid unexpected breaks in the future, lock your dependencies to specific ver
   ```
 98. When building our operators, we usually prefer deployments over statefulsets and cronjobs over jobs.
 
+98. Finalizers is an advanced topic. Do you need it? Usually the Kubernetes garbage collector does the cleanup for you if owner references are configured well.
+
 99. How to write a finalizer
 
      ```
