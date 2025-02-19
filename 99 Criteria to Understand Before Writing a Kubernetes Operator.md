@@ -211,6 +211,8 @@ To avoid unexpected breaks in the future, lock your dependencies to specific ver
   ```bash
   golangci-lint run
   ```
+98. When building our operators, we usually prefer deployments over statefulsets and cronjobs over jobs.
+
 99. How to write a finalizer
 
      ```
