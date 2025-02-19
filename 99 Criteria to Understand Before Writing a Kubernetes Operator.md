@@ -217,6 +217,7 @@ To avoid unexpected breaks in the future, lock your dependencies to specific ver
 
 It is usually a controller that removes the finalizer. After doing custom cleanup on resource deletion (deletionTimestamp set).
 
+So if you are not doing something REALLY special, you don't need finalizers.
 
 100. How to write a finalizer
 
