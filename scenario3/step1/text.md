@@ -5,6 +5,12 @@ blabla:
   toolchain go1.22.3
 
 
+Go version 1.24.0
+```shell
+curl -OL  https://go.dev/dl/go1.24.0.linux-amd64.tar.gz \
+&&  rm -rf /usr/local/go && tar -C /usr/local -xzf go1.24.0.linux-amd64.tar.gz
+```{{exec}}
+
 Go version 1.23.2
 ```shell
 curl -OL  https://go.dev/dl/go1.23.2.linux-amd64.tar.gz \
@@ -119,6 +125,7 @@ Setup Go path
 ```shell
 export GOPATH=/root/go
 export GOROOT=/usr/local/go
+export GOTOOLCHAIN=local
 export PATH=/usr/local/go/bin:$GOPATH/bin:$PATH
 alias h=history
 alias kb=kubebuilder
