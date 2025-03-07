@@ -1,0 +1,8 @@
+{
+  "title": "A functional approach to Kubernetes cluster design",
+  "description": "This is the description of A functional approach to Kubernetes cluster design",
+
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}
