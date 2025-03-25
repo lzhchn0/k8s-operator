@@ -7,7 +7,7 @@ In **SAP's `component-operator-runtime`**, both **`TransformableHelmGenerator`**
   - Suitable when the Helm chart’s default values and structure are sufficient.  
   - Works directly with Helm’s native templating.
 - **Additional structures**:
-  - generator.go  
+  - internal/generator/generator.go  
      
 
 - **Example Use Case**:  
@@ -22,6 +22,7 @@ In **SAP's `component-operator-runtime`**, both **`TransformableHelmGenerator`**
 - **Additional structures**:
   - parameters.yaml
   - binding.yaml
+  - internal/transformer/object_transformer.go
   
 - **Example Use Case**:  
   - Deploying a Helm chart but needing to inject specific security policies.  
