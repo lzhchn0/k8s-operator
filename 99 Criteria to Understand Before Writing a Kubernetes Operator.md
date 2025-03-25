@@ -202,6 +202,10 @@ To avoid unexpected breaks in the future, lock your dependencies to specific ver
   ```bash
   goimports -w .
   ```
+- **solve compatiable Issues**: Run `go vendor` to solve compatible issues in your code.
+  ```bash
+  go vendor ./...
+  ```
 
 - **Catch Common Issues**: Run `go vet` to detect static potential issues in your code.
   ```bash
