@@ -27,6 +27,9 @@ In **SAP's `component-operator-runtime`**, both **`TransformableHelmGenerator`**
 - **Example Use Case**:  
   - Deploying a Helm chart but needing to inject specific security policies.  
   - Adjusting resource limits based on environment (dev vs. prod).  
+## reconcileBinding Explained
+
+To be continued
 
 ## ResourceGenerator Explained 
 
