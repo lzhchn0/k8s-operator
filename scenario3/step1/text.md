@@ -134,6 +134,8 @@ alias  trim='sed "s/^[\t ]*//g"i'
 alias kx='f() { [ "$1" ] && kubectl config use-context $1 || kubectl config current-context ; } ; f'
 alias kn='f() { [ "$1" ] && kubectl config set-context --current --namespace $1 || kubectl config view --minify | grep namespace | cut -d" " -f6 ; } ; f'
 
+export sss='--sort-by=.metadata.creationTimestamp'
+export sl=" --show-labels"
 export d=describe
 export now="--grace-period=0 --force"
 export do="-o yaml --dry-run=client"
