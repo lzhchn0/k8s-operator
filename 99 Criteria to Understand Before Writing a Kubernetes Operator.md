@@ -54,6 +54,8 @@ The `types.go` file is used to define **types**.
 
 ## Let Informer to watch resources in a limited scope. 
 
+## Enabled: json:"enabled, omitempty" consistency 
+
 ## Observability is crucial.
 - Once you have full visibility into your operator, nothing will stand in the way of your success.
 - Spew is an excellent tool for gaining the visibility you need.
